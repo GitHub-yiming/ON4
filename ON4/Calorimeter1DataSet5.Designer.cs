@@ -303,6 +303,10 @@ namespace ON4 {
             
             private global::System.Data.DataColumn columnCreateTime;
             
+            private global::System.Data.DataColumn columnCooling_price;
+            
+            private global::System.Data.DataColumn columnCalories_price;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public AdvancedViewDataTable() {
@@ -434,6 +438,22 @@ namespace ON4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Cooling_priceColumn {
+                get {
+                    return this.columnCooling_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Calories_priceColumn {
+                get {
+                    return this.columnCalories_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -469,7 +489,7 @@ namespace ON4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdvancedViewRow AddAdvancedViewRow(string Table_number, string Names, string Room_No, string Building, decimal Cooling_capacity, decimal Calories, decimal Dosage_Cooling_capacity, decimal Dosage_Calories, decimal Cost_Cooling_capacity, decimal Cost_Calories, decimal Total_cost, System.DateTime CreateTime) {
+            public AdvancedViewRow AddAdvancedViewRow(string Table_number, string Names, string Room_No, string Building, decimal Cooling_capacity, decimal Calories, decimal Dosage_Cooling_capacity, decimal Dosage_Calories, decimal Cost_Cooling_capacity, decimal Cost_Calories, decimal Total_cost, System.DateTime CreateTime, decimal Cooling_price, decimal Calories_price) {
                 AdvancedViewRow rowAdvancedViewRow = ((AdvancedViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Table_number,
@@ -483,7 +503,9 @@ namespace ON4 {
                         Cost_Cooling_capacity,
                         Cost_Calories,
                         Total_cost,
-                        CreateTime};
+                        CreateTime,
+                        Cooling_price,
+                        Calories_price};
                 rowAdvancedViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAdvancedViewRow);
                 return rowAdvancedViewRow;
@@ -518,6 +540,8 @@ namespace ON4 {
                 this.columnCost_Calories = base.Columns["Cost_Calories"];
                 this.columnTotal_cost = base.Columns["Total_cost"];
                 this.columnCreateTime = base.Columns["CreateTime"];
+                this.columnCooling_price = base.Columns["Cooling_price"];
+                this.columnCalories_price = base.Columns["Calories_price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -547,6 +571,10 @@ namespace ON4 {
                 base.Columns.Add(this.columnTotal_cost);
                 this.columnCreateTime = new global::System.Data.DataColumn("CreateTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCreateTime);
+                this.columnCooling_price = new global::System.Data.DataColumn("Cooling_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCooling_price);
+                this.columnCalories_price = new global::System.Data.DataColumn("Calories_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCalories_price);
                 this.columnTable_number.AllowDBNull = false;
                 this.columnTable_number.MaxLength = 30;
                 this.columnNames.MaxLength = 20;
@@ -881,6 +909,38 @@ namespace ON4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Cooling_price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableAdvancedView.Cooling_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“AdvancedView”中列“Cooling_price”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableAdvancedView.Cooling_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Calories_price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableAdvancedView.Calories_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“AdvancedView”中列“Calories_price”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableAdvancedView.Calories_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNamesNull() {
                 return this.IsNull(this.tableAdvancedView.NamesColumn);
             }
@@ -1009,6 +1069,30 @@ namespace ON4 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCreateTimeNull() {
                 this[this.tableAdvancedView.CreateTimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCooling_priceNull() {
+                return this.IsNull(this.tableAdvancedView.Cooling_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCooling_priceNull() {
+                this[this.tableAdvancedView.Cooling_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCalories_priceNull() {
+                return this.IsNull(this.tableAdvancedView.Calories_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCalories_priceNull() {
+                this[this.tableAdvancedView.Calories_priceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1183,6 +1267,8 @@ namespace ON4.Calorimeter1DataSet5TableAdapters {
             tableMapping.ColumnMappings.Add("Cost_Calories", "Cost_Calories");
             tableMapping.ColumnMappings.Add("Total_cost", "Total_cost");
             tableMapping.ColumnMappings.Add("CreateTime", "CreateTime");
+            tableMapping.ColumnMappings.Add("Cooling_price", "Cooling_price");
+            tableMapping.ColumnMappings.Add("Calories_price", "Calories_price");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1201,7 +1287,7 @@ namespace ON4.Calorimeter1DataSet5TableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Table_number, Names, Room_No, Building, Cooling_capacity, Calories, Dosage" +
                 "_Cooling_capacity, Dosage_Calories, Cost_Cooling_capacity, Cost_Calories, Total_" +
-                "cost, CreateTime FROM dbo.AdvancedView";
+                "cost, CreateTime,Cooling_price,Calories_price FROM dbo.AdvancedView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

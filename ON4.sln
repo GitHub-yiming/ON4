@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modles", "Modles\Modles.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{BE315D30-9C01-458B-BDB2-02515A195383}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ON4SetUp", "..\ON4SetUp\ON4SetUp.vdproj", "{6195844D-6CBC-4B9F-9972-02E3791A3E0D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ON4SetUp", "ON4SetUp\ON4SetUp.vdproj", "{9E9A0275-E578-4687-9D10-872FEC22FC0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{BE315D30-9C01-458B-BDB2-02515A195383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE315D30-9C01-458B-BDB2-02515A195383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE315D30-9C01-458B-BDB2-02515A195383}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6195844D-6CBC-4B9F-9972-02E3791A3E0D}.Debug|Any CPU.ActiveCfg = Debug
-		{6195844D-6CBC-4B9F-9972-02E3791A3E0D}.Debug|Any CPU.Build.0 = Debug
-		{6195844D-6CBC-4B9F-9972-02E3791A3E0D}.Release|Any CPU.ActiveCfg = Release
-		{6195844D-6CBC-4B9F-9972-02E3791A3E0D}.Release|Any CPU.Build.0 = Release
+		{9E9A0275-E578-4687-9D10-872FEC22FC0F}.Debug|Any CPU.ActiveCfg = Debug
+		{9E9A0275-E578-4687-9D10-872FEC22FC0F}.Debug|Any CPU.Build.0 = Debug
+		{9E9A0275-E578-4687-9D10-872FEC22FC0F}.Release|Any CPU.ActiveCfg = Release
+		{9E9A0275-E578-4687-9D10-872FEC22FC0F}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
