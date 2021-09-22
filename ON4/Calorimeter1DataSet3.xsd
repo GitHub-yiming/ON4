@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Calorimeter1DataSet3" targetNamespace="http://tempuri.org/Calorimeter1DataSet3.xsd" xmlns:mstns="http://tempuri.org/Calorimeter1DataSet3.xsd" xmlns="http://tempuri.org/Calorimeter1DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Calorimeter1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Calorimeter1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ON4.Properties.Settings.GlobalReference.Default.Calorimeter1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_user_balanceTableAdapter" GeneratorDataComponentClassName="View_user_balanceTableAdapter" Name="View_user_balance" UserDataComponentName="View_user_balanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Calorimeter1ConnectionString (Settings)" DbObjectName="Calorimeter1.dbo.View_user_balance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Table_number, Names, Balance,Quota, NumberofLayer, Room_No FROM dbo.View_user_balance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Table_number" DataSetColumn="Table_number" />
+              <Mapping SourceColumn="Names" DataSetColumn="Names" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="NumberofLayer" DataSetColumn="NumberofLayer" />
+              <Mapping SourceColumn="Room_No" DataSetColumn="Room_No" />
+              <Mapping SourceColumn="Quota" DataSetColumn="Quota" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Calorimeter1DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Calorimeter1DataSet3" msprop:Generator_UserDSName="Calorimeter1DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_user_balance" msprop:Generator_TableClassName="View_user_balanceDataTable" msprop:Generator_TableVarName="tableView_user_balance" msprop:Generator_RowChangedName="View_user_balanceRowChanged" msprop:Generator_TablePropName="View_user_balance" msprop:Generator_RowDeletingName="View_user_balanceRowDeleting" msprop:Generator_RowChangingName="View_user_balanceRowChanging" msprop:Generator_RowEvHandlerName="View_user_balanceRowChangeEventHandler" msprop:Generator_RowDeletedName="View_user_balanceRowDeleted" msprop:Generator_RowClassName="View_user_balanceRow" msprop:Generator_UserTableName="View_user_balance" msprop:Generator_RowEvArgName="View_user_balanceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Table_number" msprop:Generator_ColumnVarNameInTable="columnTable_number" msprop:Generator_ColumnPropNameInRow="Table_number" msprop:Generator_ColumnPropNameInTable="Table_numberColumn" msprop:Generator_UserColumnName="Table_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Names" msprop:Generator_ColumnVarNameInTable="columnNames" msprop:Generator_ColumnPropNameInRow="Names" msprop:Generator_ColumnPropNameInTable="NamesColumn" msprop:Generator_UserColumnName="Names" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NumberofLayer" msprop:Generator_ColumnVarNameInTable="columnNumberofLayer" msprop:Generator_ColumnPropNameInRow="NumberofLayer" msprop:Generator_ColumnPropNameInTable="NumberofLayerColumn" msprop:Generator_UserColumnName="NumberofLayer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_No" msprop:Generator_ColumnVarNameInTable="columnRoom_No" msprop:Generator_ColumnPropNameInRow="Room_No" msprop:Generator_ColumnPropNameInTable="Room_NoColumn" msprop:Generator_UserColumnName="Room_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quota" msprop:Generator_ColumnVarNameInTable="columnQuota" msprop:Generator_ColumnPropNameInRow="Quota" msprop:Generator_ColumnPropNameInTable="QuotaColumn" msprop:Generator_UserColumnName="Quota" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_user_balance" />
+      <xs:field xpath="mstns:Table_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

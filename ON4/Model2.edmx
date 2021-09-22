@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Calorimeter1Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table_Numbers1">
+          <Key>
+            <PropertyRef Name="Table_Number1" />
+          </Key>
+          <Property Name="Table_Number1" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="NumberofLayersId" Type="int" Nullable="false" />
+          <Property Name="ControlAddress" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Port_diection" Type="nvarchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Table_Numbers1_Table_Numbers1">
+          <End Role="Table_Numbers1" Type="Self.Table_Numbers1" Multiplicity="1" />
+          <End Role="Table_Numbers11" Type="Self.Table_Numbers1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Numbers1">
+              <PropertyRef Name="Table_Number1" />
+            </Principal>
+            <Dependent Role="Table_Numbers11">
+              <PropertyRef Name="Table_Number1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Calorimeter1Model1StoreContainer">
+          <EntitySet Name="Table_Numbers1" EntityType="Self.Table_Numbers1" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Table_Numbers1_Table_Numbers1" Association="Self.FK_Table_Numbers1_Table_Numbers1">
+            <End Role="Table_Numbers1" EntitySet="Table_Numbers1" />
+            <End Role="Table_Numbers11" EntitySet="Table_Numbers1" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Calorimeter1Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table_Numbers1">
+          <Key>
+            <PropertyRef Name="Table_Number1" />
+          </Key>
+          <Property Name="Table_Number1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberofLayersId" Type="Int32" Nullable="false" />
+          <Property Name="ControlAddress" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Port_diection" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Table_Numbers1_Table_Numbers1">
+          <End Role="Table_Numbers1" Type="Self.Table_Numbers1" Multiplicity="1" />
+          <End Role="Table_Numbers11" Type="Self.Table_Numbers1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Numbers1">
+              <PropertyRef Name="Table_Number1" />
+            </Principal>
+            <Dependent Role="Table_Numbers11">
+              <PropertyRef Name="Table_Number1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Calorimeter1Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Table_Numbers1" EntityType="Self.Table_Numbers1" />
+          <AssociationSet Name="FK_Table_Numbers1_Table_Numbers1" Association="Self.FK_Table_Numbers1_Table_Numbers1">
+            <End Role="Table_Numbers1" EntitySet="Table_Numbers1" />
+            <End Role="Table_Numbers11" EntitySet="Table_Numbers1" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Calorimeter1Model1StoreContainer" CdmEntityContainer="Calorimeter1Entities1">
+          <EntitySetMapping Name="Table_Numbers1">
+            <EntityTypeMapping TypeName="Calorimeter1Model1.Table_Numbers1">
+              <MappingFragment StoreEntitySet="Table_Numbers1">
+                <ScalarProperty Name="Port_diection" ColumnName="Port_diection" />
+                <ScalarProperty Name="ControlAddress" ColumnName="ControlAddress" />
+                <ScalarProperty Name="Table_Number1" ColumnName="Table_Number1" />
+                <ScalarProperty Name="NumberofLayersId" ColumnName="NumberofLayersId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

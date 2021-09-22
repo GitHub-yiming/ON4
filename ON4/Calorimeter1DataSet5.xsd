@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Calorimeter1DataSet5" targetNamespace="http://tempuri.org/Calorimeter1DataSet5.xsd" xmlns:mstns="http://tempuri.org/Calorimeter1DataSet5.xsd" xmlns="http://tempuri.org/Calorimeter1DataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Calorimeter1ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Calorimeter1ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ON4.Properties.Settings.GlobalReference.Default.Calorimeter1ConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdvancedViewTableAdapter" GeneratorDataComponentClassName="AdvancedViewTableAdapter" Name="AdvancedView" UserDataComponentName="AdvancedViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Calorimeter1ConnectionString1 (Settings)" DbObjectName="Calorimeter1.dbo.AdvancedView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Table_number, Names, Room_No, Building, Cooling_capacity, Calories, Dosage_Cooling_capacity, Dosage_Calories, Cost_Cooling_capacity, Cost_Calories, Total_cost, CreateTime FROM dbo.AdvancedView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Table_number" DataSetColumn="Table_number" />
+              <Mapping SourceColumn="Names" DataSetColumn="Names" />
+              <Mapping SourceColumn="Room_No" DataSetColumn="Room_No" />
+              <Mapping SourceColumn="Building" DataSetColumn="Building" />
+              <Mapping SourceColumn="Cooling_capacity" DataSetColumn="Cooling_capacity" />
+              <Mapping SourceColumn="Calories" DataSetColumn="Calories" />
+              <Mapping SourceColumn="Dosage_Cooling_capacity" DataSetColumn="Dosage_Cooling_capacity" />
+              <Mapping SourceColumn="Dosage_Calories" DataSetColumn="Dosage_Calories" />
+              <Mapping SourceColumn="Cost_Cooling_capacity" DataSetColumn="Cost_Cooling_capacity" />
+              <Mapping SourceColumn="Cost_Calories" DataSetColumn="Cost_Calories" />
+              <Mapping SourceColumn="Total_cost" DataSetColumn="Total_cost" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Calorimeter1DataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Calorimeter1DataSet5" msprop:Generator_UserDSName="Calorimeter1DataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AdvancedView" msprop:Generator_TableClassName="AdvancedViewDataTable" msprop:Generator_TableVarName="tableAdvancedView" msprop:Generator_RowChangedName="AdvancedViewRowChanged" msprop:Generator_TablePropName="AdvancedView" msprop:Generator_RowDeletingName="AdvancedViewRowDeleting" msprop:Generator_RowChangingName="AdvancedViewRowChanging" msprop:Generator_RowEvHandlerName="AdvancedViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AdvancedViewRowDeleted" msprop:Generator_RowClassName="AdvancedViewRow" msprop:Generator_UserTableName="AdvancedView" msprop:Generator_RowEvArgName="AdvancedViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Table_number" msprop:Generator_ColumnVarNameInTable="columnTable_number" msprop:Generator_ColumnPropNameInRow="Table_number" msprop:Generator_ColumnPropNameInTable="Table_numberColumn" msprop:Generator_UserColumnName="Table_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Names" msprop:Generator_ColumnVarNameInTable="columnNames" msprop:Generator_ColumnPropNameInRow="Names" msprop:Generator_ColumnPropNameInTable="NamesColumn" msprop:Generator_UserColumnName="Names" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_No" msprop:Generator_ColumnVarNameInTable="columnRoom_No" msprop:Generator_ColumnPropNameInRow="Room_No" msprop:Generator_ColumnPropNameInTable="Room_NoColumn" msprop:Generator_UserColumnName="Room_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Building" msprop:Generator_ColumnVarNameInTable="columnBuilding" msprop:Generator_ColumnPropNameInRow="Building" msprop:Generator_ColumnPropNameInTable="BuildingColumn" msprop:Generator_UserColumnName="Building" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cooling_capacity" msprop:Generator_ColumnVarNameInTable="columnCooling_capacity" msprop:Generator_ColumnPropNameInRow="Cooling_capacity" msprop:Generator_ColumnPropNameInTable="Cooling_capacityColumn" msprop:Generator_UserColumnName="Cooling_capacity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Calories" msprop:Generator_ColumnVarNameInTable="columnCalories" msprop:Generator_ColumnPropNameInRow="Calories" msprop:Generator_ColumnPropNameInTable="CaloriesColumn" msprop:Generator_UserColumnName="Calories" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Dosage_Cooling_capacity" msprop:Generator_ColumnVarNameInTable="columnDosage_Cooling_capacity" msprop:Generator_ColumnPropNameInRow="Dosage_Cooling_capacity" msprop:Generator_ColumnPropNameInTable="Dosage_Cooling_capacityColumn" msprop:Generator_UserColumnName="Dosage_Cooling_capacity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Dosage_Calories" msprop:Generator_ColumnVarNameInTable="columnDosage_Calories" msprop:Generator_ColumnPropNameInRow="Dosage_Calories" msprop:Generator_ColumnPropNameInTable="Dosage_CaloriesColumn" msprop:Generator_UserColumnName="Dosage_Calories" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cost_Cooling_capacity" msprop:Generator_ColumnVarNameInTable="columnCost_Cooling_capacity" msprop:Generator_ColumnPropNameInRow="Cost_Cooling_capacity" msprop:Generator_ColumnPropNameInTable="Cost_Cooling_capacityColumn" msprop:Generator_UserColumnName="Cost_Cooling_capacity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cost_Calories" msprop:Generator_ColumnVarNameInTable="columnCost_Calories" msprop:Generator_ColumnPropNameInRow="Cost_Calories" msprop:Generator_ColumnPropNameInTable="Cost_CaloriesColumn" msprop:Generator_UserColumnName="Cost_Calories" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total_cost" msprop:Generator_ColumnVarNameInTable="columnTotal_cost" msprop:Generator_ColumnPropNameInRow="Total_cost" msprop:Generator_ColumnPropNameInTable="Total_costColumn" msprop:Generator_UserColumnName="Total_cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" msprop:Generator_UserColumnName="CreateTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

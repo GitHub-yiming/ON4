@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Calorimeter1Model3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="User_balance">
+          <Key>
+            <PropertyRef Name="Table_number" />
+          </Key>
+          <Property Name="Table_number" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Names" Type="nvarchar" MaxLength="20" />
+          <Property Name="Balance" Type="money" />
+          <Property Name="Quota" Type="money" />
+          <Property Name="NumberofLayersId" Type="int" />
+          <Property Name="Room_No" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Calorimeter1Model3StoreContainer">
+          <EntitySet Name="User_balance" EntityType="Self.User_balance" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Calorimeter1Model3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User_balance">
+          <Key>
+            <PropertyRef Name="Table_number" />
+          </Key>
+          <Property Name="Table_number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Names" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Quota" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NumberofLayersId" Type="Int32" />
+          <Property Name="Room_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Calorimeter1Entities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User_balance" EntityType="Self.User_balance" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Calorimeter1Model3StoreContainer" CdmEntityContainer="Calorimeter1Entities4">
+          <EntitySetMapping Name="User_balance">
+            <EntityTypeMapping TypeName="Calorimeter1Model3.User_balance">
+              <MappingFragment StoreEntitySet="User_balance">
+                <ScalarProperty Name="Table_number" ColumnName="Table_number" />
+                <ScalarProperty Name="Names" ColumnName="Names" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Quota" ColumnName="Quota" />
+                <ScalarProperty Name="NumberofLayersId" ColumnName="NumberofLayersId" />
+                <ScalarProperty Name="Room_No" ColumnName="Room_No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

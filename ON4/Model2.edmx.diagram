@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67a023ab99a74f31b226a4ad335da772" Name="Diagram1">
+        <EntityTypeShape EntityType="Calorimeter1Model1.Table_Numbers1" Width="3.625" PointX="1" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="Calorimeter1Model1.FK_Table_Numbers1_Table_Numbers1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

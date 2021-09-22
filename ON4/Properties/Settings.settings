@@ -1,0 +1,148 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ON4.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="timer" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Recording" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ControlComName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot4" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot5" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot6" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot7" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cboPot8" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="启用继电器控制" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用清零" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用检定" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="记录楼层" Type="System.String" Scope="User">
+      <Value Profile="(Default)">全部</Value>
+    </Setting>
+    <Setting Name="Calorimeter1ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
+    </Setting>
+    <Setting Name="启用计费" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用自动记录" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="从__点到" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="__开始自动记录" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="每隔__小时记录一次" Type="System.String" Scope="User">
+      <Value Profile="(Default)">一个</Value>
+    </Setting>
+    <Setting Name="自动连接串口" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="楼层五串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM51</Value>
+    </Setting>
+    <Setting Name="楼层六串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM61</Value>
+    </Setting>
+    <Setting Name="五层阀门串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM52</Value>
+    </Setting>
+    <Setting Name="六层阀门串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM62</Value>
+    </Setting>
+    <Setting Name="楼层三串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM31</Value>
+    </Setting>
+    <Setting Name="楼层四串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM41</Value>
+    </Setting>
+    <Setting Name="三层阀门串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM32</Value>
+    </Setting>
+    <Setting Name="四层阀门串口" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM42</Value>
+    </Setting>
+    <Setting Name="启用费用编辑" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用缴费编辑" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用缴费删除" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用费用统计编辑" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="启用费用统计删除" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="允许修改额度" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Calorimeter1ConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
+    </Setting>
+    <Setting Name="小时触发" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="时间间隔" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="读表失败处理时间" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="三层阀门串口2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM30</Value>
+    </Setting>
+    <Setting Name="四层阀门串口2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM40</Value>
+    </Setting>
+    <Setting Name="五层阀门串口2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM50</Value>
+    </Setting>
+    <Setting Name="六层阀门串口2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM60</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
