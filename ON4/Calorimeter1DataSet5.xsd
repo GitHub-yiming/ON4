@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="Calorimeter1ConnectionString1 (Settings)" DbObjectName="Calorimeter1.dbo.AdvancedView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Table_number, Names, Room_No, Building, Cooling_capacity, Calories, Dosage_Cooling_capacity, Dosage_Calories, Cost_Cooling_capacity, Cost_Calories, Total_cost, CreateTime FROM dbo.AdvancedView</CommandText>
+                    <CommandText>SELECT Table_number, Names, Room_No, Building, Cooling_capacity, Calories, Dosage_Cooling_capacity, Dosage_Calories, Cost_Cooling_capacity, Cost_Calories, Total_cost, CreateTime,Cooling_price,Calories_price FROM dbo.AdvancedView</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -31,6 +31,8 @@
               <Mapping SourceColumn="Cost_Calories" DataSetColumn="Cost_Calories" />
               <Mapping SourceColumn="Total_cost" DataSetColumn="Total_cost" />
               <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="Cooling_price" DataSetColumn="Cooling_price" />
+              <Mapping SourceColumn="Calories_price" DataSetColumn="Calories_price" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -42,7 +44,7 @@
   <xs:element name="Calorimeter1DataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Calorimeter1DataSet5" msprop:Generator_UserDSName="Calorimeter1DataSet5">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AdvancedView" msprop:Generator_TableClassName="AdvancedViewDataTable" msprop:Generator_TableVarName="tableAdvancedView" msprop:Generator_RowChangedName="AdvancedViewRowChanged" msprop:Generator_TablePropName="AdvancedView" msprop:Generator_RowDeletingName="AdvancedViewRowDeleting" msprop:Generator_RowChangingName="AdvancedViewRowChanging" msprop:Generator_RowEvHandlerName="AdvancedViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AdvancedViewRowDeleted" msprop:Generator_RowClassName="AdvancedViewRow" msprop:Generator_UserTableName="AdvancedView" msprop:Generator_RowEvArgName="AdvancedViewRowChangeEvent">
+        <xs:element name="AdvancedView" msprop:Generator_TableClassName="AdvancedViewDataTable" msprop:Generator_TableVarName="tableAdvancedView" msprop:Generator_TablePropName="AdvancedView" msprop:Generator_RowDeletingName="AdvancedViewRowDeleting" msprop:Generator_RowChangingName="AdvancedViewRowChanging" msprop:Generator_RowEvHandlerName="AdvancedViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AdvancedViewRowDeleted" msprop:Generator_UserTableName="AdvancedView" msprop:Generator_RowChangedName="AdvancedViewRowChanged" msprop:Generator_RowEvArgName="AdvancedViewRowChangeEvent" msprop:Generator_RowClassName="AdvancedViewRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Table_number" msprop:Generator_ColumnVarNameInTable="columnTable_number" msprop:Generator_ColumnPropNameInRow="Table_number" msprop:Generator_ColumnPropNameInTable="Table_numberColumn" msprop:Generator_UserColumnName="Table_number">
@@ -81,6 +83,8 @@
               <xs:element name="Cost_Calories" msprop:Generator_ColumnVarNameInTable="columnCost_Calories" msprop:Generator_ColumnPropNameInRow="Cost_Calories" msprop:Generator_ColumnPropNameInTable="Cost_CaloriesColumn" msprop:Generator_UserColumnName="Cost_Calories" type="xs:decimal" minOccurs="0" />
               <xs:element name="Total_cost" msprop:Generator_ColumnVarNameInTable="columnTotal_cost" msprop:Generator_ColumnPropNameInRow="Total_cost" msprop:Generator_ColumnPropNameInTable="Total_costColumn" msprop:Generator_UserColumnName="Total_cost" type="xs:decimal" minOccurs="0" />
               <xs:element name="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" msprop:Generator_UserColumnName="CreateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cooling_price" msprop:Generator_ColumnVarNameInTable="columnCooling_price" msprop:Generator_ColumnPropNameInRow="Cooling_price" msprop:Generator_ColumnPropNameInTable="Cooling_priceColumn" msprop:Generator_UserColumnName="Cooling_price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Calories_price" msprop:Generator_ColumnVarNameInTable="columnCalories_price" msprop:Generator_ColumnPropNameInRow="Calories_price" msprop:Generator_ColumnPropNameInTable="Calories_priceColumn" msprop:Generator_UserColumnName="Calories_price" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

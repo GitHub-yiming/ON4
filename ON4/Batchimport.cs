@@ -70,6 +70,8 @@ namespace ON4
                     }
 
                     bcp.WriteToServer(ds.Tables[0]);
+                    progressBar1.Value = 0;
+                    MessageBox.Show("导入完成！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
