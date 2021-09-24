@@ -69,6 +69,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8EFD821BE06246D0B522BEBD5D1C9560"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B6982B153E702005DF3D77645FEA28BE"
         "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
         "MsmSig" = "8:_UNDEFINED"
@@ -83,6 +89,12 @@
         {
         "MsmKey" = "8:_C6482B15DC7D2112DD89BEB1228F9775"
         "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CCECCCBDAEEB4BD8A8AF18CCABEFC798"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,6 +130,18 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_83CF8F4D8F2E87D1665E5EF9031F96F3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_EA8E3A82F1BFCA69F9DCDB7071930686"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2F041E5CF2F7B2F6571FCBAEFDE80129"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -143,18 +167,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B6982B153E702005DF3D77645FEA28BE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_83CF8F4D8F2E87D1665E5EF9031F96F3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EA8E3A82F1BFCA69F9DCDB7071930686"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -439,6 +451,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8EFD821BE06246D0B522BEBD5D1C9560"
+            {
+            "SourcePath" = "8:..\\ON4\\SQL\\Calorimeter1.sql"
+            "TargetName" = "8:Calorimeter1.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_BC8EEBA9CFC04D2193D8ACDF67803451"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B6982B153E702005DF3D77645FEA28BE"
             {
             "AssemblyRegister" = "3:1"
@@ -519,6 +551,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CCECCCBDAEEB4BD8A8AF18CCABEFC798"
+            {
+            "SourcePath" = "8:..\\ON4\\SQL\\Sql_view.sql"
+            "TargetName" = "8:Sql_view.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_BC8EEBA9CFC04D2193D8ACDF67803451"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF842F5ECAEB4F2FB7A2C5999ADA38A9"
@@ -630,6 +682,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_BC8EEBA9CFC04D2193D8ACDF67803451"
+                    {
+                    "Name" = "8:SQL"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_E5039B343AC140F2AF4AD99321B3F01F"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_B660087D365343CCBCB365FC0A9902B3"
@@ -660,7 +723,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ON4"
         "ProductCode" = "8:{2AE58504-FD01-42A3-B20C-5F0B5842606F}"
-        "PackageCode" = "8:{1097286A-39C4-434C-B0D8-0957D7A68208}"
+        "PackageCode" = "8:{D597157E-92AC-4199-9138-C516331A82A7}"
         "UpgradeCode" = "8:{4B2A1727-BD5E-4DE3-B5DD-CE51BEAB1C27}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
