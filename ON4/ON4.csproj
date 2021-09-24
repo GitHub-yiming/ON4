@@ -586,6 +586,8 @@
       <LastGenOutput>Model4.cs</LastGenOutput>
     </Content>
     <Content Include="ON4.ico" />
+    <Content Include="SQL\Calorimeter1.sql" />
+    <Content Include="SQL\Sql_view.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
