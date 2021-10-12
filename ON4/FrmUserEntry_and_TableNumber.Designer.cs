@@ -37,6 +37,14 @@ namespace ON4
             this.btnEdit = new Sunny.UI.UIButton();
             this.btnAdd = new Sunny.UI.UIButton();
             this.dgvScoreList = new Sunny.UI.UIDataGridView();
+            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberofLayersIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billabletimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userdata1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTablenumber = new Sunny.UI.UITextBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -49,14 +57,7 @@ namespace ON4
             this.btnName = new Sunny.UI.UIButton();
             this.btnRefresh = new Sunny.UI.UIButton();
             this.uiButton1 = new Sunny.UI.UIButton();
-            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberofLayersIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.billabletimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiButton2 = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userdata1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +149,78 @@ namespace ON4
             this.dgvScoreList.Size = new System.Drawing.Size(1571, 691);
             this.dgvScoreList.TabIndex = 1;
             this.dgvScoreList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvScoreList_RowPostPaint_1);
+            // 
+            // tablenumberDataGridViewTextBoxColumn
+            // 
+            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
+            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
+            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
+            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // namesDataGridViewTextBoxColumn
+            // 
+            this.namesDataGridViewTextBoxColumn.DataPropertyName = "Names";
+            this.namesDataGridViewTextBoxColumn.HeaderText = "姓名";
+            this.namesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namesDataGridViewTextBoxColumn.Name = "namesDataGridViewTextBoxColumn";
+            this.namesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "性别";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // roomNoDataGridViewTextBoxColumn
+            // 
+            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "Room_No";
+            this.roomNoDataGridViewTextBoxColumn.HeaderText = "房号";
+            this.roomNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
+            this.roomNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roomNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // buildingDataGridViewTextBoxColumn
+            // 
+            this.buildingDataGridViewTextBoxColumn.DataPropertyName = "Building";
+            this.buildingDataGridViewTextBoxColumn.HeaderText = "楼栋";
+            this.buildingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingDataGridViewTextBoxColumn.Name = "buildingDataGridViewTextBoxColumn";
+            this.buildingDataGridViewTextBoxColumn.ReadOnly = true;
+            this.buildingDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "手机";
+            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numberofLayersIdDataGridViewTextBoxColumn
+            // 
+            this.numberofLayersIdDataGridViewTextBoxColumn.DataPropertyName = "NumberofLayersId";
+            this.numberofLayersIdDataGridViewTextBoxColumn.HeaderText = "楼层";
+            this.numberofLayersIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numberofLayersIdDataGridViewTextBoxColumn.Name = "numberofLayersIdDataGridViewTextBoxColumn";
+            this.numberofLayersIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numberofLayersIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // billabletimeDataGridViewTextBoxColumn
+            // 
+            this.billabletimeDataGridViewTextBoxColumn.DataPropertyName = "Billabletime";
+            this.billabletimeDataGridViewTextBoxColumn.HeaderText = "计费时间";
+            this.billabletimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.billabletimeDataGridViewTextBoxColumn.Name = "billabletimeDataGridViewTextBoxColumn";
+            this.billabletimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.billabletimeDataGridViewTextBoxColumn.Width = 125;
             // 
             // userdata1BindingSource
             // 
@@ -304,79 +377,22 @@ namespace ON4
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
             this.uiButton1.TabIndex = 11;
             this.uiButton1.Text = "导出";
-            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click_1);
             // 
-            // tablenumberDataGridViewTextBoxColumn
+            // uiButton2
             // 
-            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
-            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
-            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
-            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namesDataGridViewTextBoxColumn
-            // 
-            this.namesDataGridViewTextBoxColumn.DataPropertyName = "Names";
-            this.namesDataGridViewTextBoxColumn.HeaderText = "姓名";
-            this.namesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namesDataGridViewTextBoxColumn.Name = "namesDataGridViewTextBoxColumn";
-            this.namesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "性别";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // roomNoDataGridViewTextBoxColumn
-            // 
-            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "Room_No";
-            this.roomNoDataGridViewTextBoxColumn.HeaderText = "房号";
-            this.roomNoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
-            this.roomNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roomNoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // buildingDataGridViewTextBoxColumn
-            // 
-            this.buildingDataGridViewTextBoxColumn.DataPropertyName = "Building";
-            this.buildingDataGridViewTextBoxColumn.HeaderText = "楼栋";
-            this.buildingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingDataGridViewTextBoxColumn.Name = "buildingDataGridViewTextBoxColumn";
-            this.buildingDataGridViewTextBoxColumn.ReadOnly = true;
-            this.buildingDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "手机";
-            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numberofLayersIdDataGridViewTextBoxColumn
-            // 
-            this.numberofLayersIdDataGridViewTextBoxColumn.DataPropertyName = "NumberofLayersId";
-            this.numberofLayersIdDataGridViewTextBoxColumn.HeaderText = "楼层";
-            this.numberofLayersIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numberofLayersIdDataGridViewTextBoxColumn.Name = "numberofLayersIdDataGridViewTextBoxColumn";
-            this.numberofLayersIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numberofLayersIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // billabletimeDataGridViewTextBoxColumn
-            // 
-            this.billabletimeDataGridViewTextBoxColumn.DataPropertyName = "Billabletime";
-            this.billabletimeDataGridViewTextBoxColumn.HeaderText = "计费时间";
-            this.billabletimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.billabletimeDataGridViewTextBoxColumn.Name = "billabletimeDataGridViewTextBoxColumn";
-            this.billabletimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.billabletimeDataGridViewTextBoxColumn.Width = 125;
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Enabled = false;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton2.Location = new System.Drawing.Point(1494, 11);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Radius = 20;
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 11;
+            this.uiButton2.Text = "导出";
+            this.uiButton2.Visible = false;
+            this.uiButton2.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // FrmUserEntry_and_TableNumber
             // 
@@ -384,6 +400,7 @@ namespace ON4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1571, 744);
+            this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.cboLay);
             this.Controls.Add(this.txtName);
@@ -433,6 +450,7 @@ namespace ON4
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberofLayersIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn billabletimeDataGridViewTextBoxColumn;
+        private Sunny.UI.UIButton uiButton2;
         //private System.Windows.Forms.DataGridViewTextBoxColumn tablenumberDataGridViewTextBoxColumn;
         //private System.Windows.Forms.DataGridViewTextBoxColumn namesDataGridViewTextBoxColumn;
         //private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;

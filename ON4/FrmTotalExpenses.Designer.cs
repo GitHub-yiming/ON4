@@ -60,6 +60,7 @@ namespace ON4
             this.viewuserbalanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calorimeter1DataSet3 = new ON4.Calorimeter1DataSet3();
             this.view_user_balanceTableAdapter = new ON4.Calorimeter1DataSet3TableAdapters.View_user_balanceTableAdapter();
+            this.uiButton2 = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userbalanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewuserbalanceBindingSource)).BeginInit();
@@ -253,7 +254,7 @@ namespace ON4
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
             this.uiButton1.TabIndex = 6;
             this.uiButton1.Text = "导出";
-            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click_1);
             // 
             // cboLay
             // 
@@ -415,6 +416,21 @@ namespace ON4
             // 
             this.view_user_balanceTableAdapter.ClearBeforeFill = true;
             // 
+            // uiButton2
+            // 
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Enabled = false;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton2.Location = new System.Drawing.Point(1662, 12);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Radius = 20;
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 6;
+            this.uiButton2.Text = "导出";
+            this.uiButton2.Visible = false;
+            this.uiButton2.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
             // FrmTotalExpenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -423,6 +439,7 @@ namespace ON4
             this.ClientSize = new System.Drawing.Size(1744, 692);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.cboLay);
+            this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtTablenumber);
             this.Controls.Add(this.uiLabel3);
@@ -477,5 +494,6 @@ namespace ON4
         private Sunny.UI.UIButton btnLay;
         private Sunny.UI.UIButton btnTablenumber;
         private Sunny.UI.UIButton btnEdit;
+        private Sunny.UI.UIButton uiButton2;
     }
 }

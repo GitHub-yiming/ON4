@@ -194,6 +194,20 @@ namespace ON4
                 }
             }
         }
+
+        private void uiButton1_Click_1(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.FilterIndex = 1;
+            saveFile.AddExtension = true;
+            saveFile.RestoreDirectory = true;
+            saveFile.Filter = ".xls|.xls";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                NPOIExcelHelper.DataGridViewToExcel(dgvScoreList, "测试", saveFile.FileName);
+            }
+            saveFile.Dispose();
+        }
     }
 }
 

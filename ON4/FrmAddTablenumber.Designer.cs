@@ -34,6 +34,11 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvScoreList = new Sunny.UI.UIDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ControlAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Port_diection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableNumbers1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTablenumber = new Sunny.UI.UITextBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.btnTablenumber = new Sunny.UI.UIButton();
@@ -45,11 +50,7 @@ namespace ON4
             this.btnLay = new Sunny.UI.UIButton();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.btnRefresh = new Sunny.UI.UIButton();
-            this.tableNumbers1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ControlAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Port_diection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiButton2 = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableNumbers1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +100,46 @@ namespace ON4
             this.dgvScoreList.Size = new System.Drawing.Size(1456, 689);
             this.dgvScoreList.TabIndex = 2;
             this.dgvScoreList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvScoreList_RowPostPaint);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Table_Number1";
+            this.dataGridViewTextBoxColumn1.HeaderText = "表号";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NumberofLayersId";
+            this.dataGridViewTextBoxColumn2.HeaderText = "楼层";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // ControlAddress
+            // 
+            this.ControlAddress.DataPropertyName = "ControlAddress";
+            this.ControlAddress.HeaderText = "继电器地址";
+            this.ControlAddress.MinimumWidth = 6;
+            this.ControlAddress.Name = "ControlAddress";
+            this.ControlAddress.ReadOnly = true;
+            this.ControlAddress.Width = 125;
+            // 
+            // Port_diection
+            // 
+            this.Port_diection.DataPropertyName = "Port_diection";
+            this.Port_diection.HeaderText = "端口";
+            this.Port_diection.MinimumWidth = 6;
+            this.Port_diection.Name = "Port_diection";
+            this.Port_diection.ReadOnly = true;
+            this.Port_diection.Width = 125;
+            // 
+            // tableNumbers1BindingSource
+            // 
+            this.tableNumbers1BindingSource.DataSource = typeof(ON4.Table_Numbers1);
             // 
             // txtTablenumber
             // 
@@ -236,8 +277,9 @@ namespace ON4
             // 
             this.uiButton1.BackColor = System.Drawing.Color.Transparent;
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Enabled = false;
             this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiButton1.Location = new System.Drawing.Point(496, 12);
+            this.uiButton1.Location = new System.Drawing.Point(1288, 12);
             this.uiButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
@@ -245,6 +287,7 @@ namespace ON4
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
             this.uiButton1.TabIndex = 17;
             this.uiButton1.Text = "导出";
+            this.uiButton1.Visible = false;
             this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // btnRefresh
@@ -261,45 +304,19 @@ namespace ON4
             this.btnRefresh.Text = "刷新表";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // tableNumbers1BindingSource
+            // uiButton2
             // 
-            this.tableNumbers1BindingSource.DataSource = typeof(ON4.Table_Numbers1);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Table_Number1";
-            this.dataGridViewTextBoxColumn1.HeaderText = "表号";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NumberofLayersId";
-            this.dataGridViewTextBoxColumn2.HeaderText = "楼层";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // ControlAddress
-            // 
-            this.ControlAddress.DataPropertyName = "ControlAddress";
-            this.ControlAddress.HeaderText = "继电器地址";
-            this.ControlAddress.MinimumWidth = 6;
-            this.ControlAddress.Name = "ControlAddress";
-            this.ControlAddress.ReadOnly = true;
-            this.ControlAddress.Width = 125;
-            // 
-            // Port_diection
-            // 
-            this.Port_diection.DataPropertyName = "Port_diection";
-            this.Port_diection.HeaderText = "端口";
-            this.Port_diection.MinimumWidth = 6;
-            this.Port_diection.Name = "Port_diection";
-            this.Port_diection.ReadOnly = true;
-            this.Port_diection.Width = 125;
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton2.Location = new System.Drawing.Point(492, 12);
+            this.uiButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Radius = 20;
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 10;
+            this.uiButton2.Text = "导出";
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
             // FrmAddTablenumber
             // 
@@ -315,6 +332,7 @@ namespace ON4
             this.Controls.Add(this.txtTablenumber);
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.btnTablenumber);
+            this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -350,5 +368,6 @@ namespace ON4
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ControlAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn Port_diection;
+        private Sunny.UI.UIButton uiButton2;
     }
 }

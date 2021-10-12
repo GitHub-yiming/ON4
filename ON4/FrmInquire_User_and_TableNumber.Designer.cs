@@ -35,14 +35,6 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.calorimeterTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.calorimeter1DataSet1 = new ON4.Calorimeter1DataSet1();
-            this.calorimeterTable1TableAdapter = new ON4.Calorimeter1DataSet1TableAdapters.CalorimeterTable1TableAdapter();
-            this.advancedViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.calorimeter1DataSet5 = new ON4.Calorimeter1DataSet5();
-            this.advancedViewTableAdapter = new ON4.Calorimeter1DataSet5TableAdapters.AdvancedViewTableAdapter();
             this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Room_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +49,20 @@ namespace ON4
             this.Cost_Calories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.advancedViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calorimeter1DataSet5 = new ON4.Calorimeter1DataSet5();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.calorimeterTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calorimeter1DataSet1 = new ON4.Calorimeter1DataSet1();
+            this.calorimeterTable1TableAdapter = new ON4.Calorimeter1DataSet1TableAdapters.CalorimeterTable1TableAdapter();
+            this.advancedViewTableAdapter = new ON4.Calorimeter1DataSet5TableAdapters.AdvancedViewTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calorimeterTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calorimeterTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,55 +114,6 @@ namespace ON4
             this.advancedDataGridView1.SortStringChanged += new System.EventHandler(this.advancedDataGridView1_SortStringChanged);
             this.advancedDataGridView1.FilterStringChanged += new System.EventHandler(this.advancedDataGridView1_FilterStringChanged);
             this.advancedDataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.advancedDataGridView1_RowPostPaint);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(239, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "&导出";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(320, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "&刷新";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // calorimeterTable1BindingSource
-            // 
-            this.calorimeterTable1BindingSource.DataMember = "CalorimeterTable1";
-            this.calorimeterTable1BindingSource.DataSource = this.calorimeter1DataSet1;
-            this.calorimeterTable1BindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.userdata1BindingSource_ListChanged);
-            // 
-            // calorimeter1DataSet1
-            // 
-            this.calorimeter1DataSet1.DataSetName = "Calorimeter1DataSet1";
-            this.calorimeter1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // calorimeterTable1TableAdapter
-            // 
-            this.calorimeterTable1TableAdapter.ClearBeforeFill = true;
-            // 
-            // advancedViewBindingSource
-            // 
-            this.advancedViewBindingSource.DataMember = "AdvancedView";
-            this.advancedViewBindingSource.DataSource = this.calorimeter1DataSet5;
-            // 
-            // calorimeter1DataSet5
-            // 
-            this.calorimeter1DataSet5.DataSetName = "Calorimeter1DataSet5";
-            this.calorimeter1DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // advancedViewTableAdapter
-            // 
-            this.advancedViewTableAdapter.ClearBeforeFill = true;
             // 
             // tablenumberDataGridViewTextBoxColumn
             // 
@@ -294,6 +246,67 @@ namespace ON4
             this.createTimeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.createTimeDataGridViewTextBoxColumn.Width = 125;
             // 
+            // advancedViewBindingSource
+            // 
+            this.advancedViewBindingSource.DataMember = "AdvancedView";
+            this.advancedViewBindingSource.DataSource = this.calorimeter1DataSet5;
+            // 
+            // calorimeter1DataSet5
+            // 
+            this.calorimeter1DataSet5.DataSetName = "Calorimeter1DataSet5";
+            this.calorimeter1DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(609, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 28);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "&导出";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(320, 36);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 28);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "&刷新";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // calorimeterTable1BindingSource
+            // 
+            this.calorimeterTable1BindingSource.DataMember = "CalorimeterTable1";
+            this.calorimeterTable1BindingSource.DataSource = this.calorimeter1DataSet1;
+            this.calorimeterTable1BindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.userdata1BindingSource_ListChanged);
+            // 
+            // calorimeter1DataSet1
+            // 
+            this.calorimeter1DataSet1.DataSetName = "Calorimeter1DataSet1";
+            this.calorimeter1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // calorimeterTable1TableAdapter
+            // 
+            this.calorimeterTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // advancedViewTableAdapter
+            // 
+            this.advancedViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(239, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 28);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "&导出";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // FrmInquire_User_and_TableNumber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -301,6 +314,7 @@ namespace ON4
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1456, 744);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.advancedDataGridView1);
             this.Controls.Add(this.label1);
@@ -308,10 +322,10 @@ namespace ON4
             this.Text = "用户与表号查询";
             this.Load += new System.EventHandler(this.FrmInquire_User_and_TableNumber_Load);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calorimeterTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calorimeterTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +356,6 @@ namespace ON4
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost_Calories;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn createTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -144,6 +144,21 @@ namespace ON4
         {
             tableNumbers1BindingSource.DataSource = db1.Table_Numbers1.ToList();
         }
+
+        //新导出按钮
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.FilterIndex = 1;
+            saveFile.AddExtension = true;
+            saveFile.RestoreDirectory = true;
+            saveFile.Filter = ".xls|.xls";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                NPOIExcelHelper.DataGridViewToExcel(dgvScoreList, "测试", saveFile.FileName);
+            }
+            saveFile.Dispose();
+        }
     }
 }
 

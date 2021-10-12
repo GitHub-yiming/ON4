@@ -34,6 +34,10 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userpayment1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDelete = new Sunny.UI.UIButton();
             this.btnEdit = new Sunny.UI.UIButton();
@@ -46,10 +50,7 @@ namespace ON4
             this.txtName = new Sunny.UI.UITextBox();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.btnName = new Sunny.UI.UIButton();
-            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiButton2 = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpayment1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +99,42 @@ namespace ON4
             this.uiDataGridView1.Size = new System.Drawing.Size(1588, 656);
             this.uiDataGridView1.TabIndex = 0;
             this.uiDataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.uiDataGridView1_RowPostPaint);
+            // 
+            // tablenumberDataGridViewTextBoxColumn
+            // 
+            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
+            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
+            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
+            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Names
+            // 
+            this.Names.DataPropertyName = "Names";
+            this.Names.HeaderText = "姓名";
+            this.Names.MinimumWidth = 6;
+            this.Names.Name = "Names";
+            this.Names.ReadOnly = true;
+            this.Names.Width = 125;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "缴费";
+            this.costDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // CreateTime
+            // 
+            this.CreateTime.DataPropertyName = "CrateTime";
+            this.CreateTime.HeaderText = "时间";
+            this.CreateTime.MinimumWidth = 6;
+            this.CreateTime.Name = "CreateTime";
+            this.CreateTime.ReadOnly = true;
+            this.CreateTime.Width = 125;
             // 
             // userpayment1BindingSource
             // 
@@ -157,7 +194,7 @@ namespace ON4
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
             this.uiButton1.TabIndex = 6;
             this.uiButton1.Text = "导出";
-            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click_1);
             // 
             // txtTablenumber
             // 
@@ -258,41 +295,20 @@ namespace ON4
             this.btnName.Text = "过滤";
             this.btnName.Click += new System.EventHandler(this.btnName_Click);
             // 
-            // tablenumberDataGridViewTextBoxColumn
+            // uiButton2
             // 
-            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
-            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
-            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
-            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Names
-            // 
-            this.Names.DataPropertyName = "Names";
-            this.Names.HeaderText = "姓名";
-            this.Names.MinimumWidth = 6;
-            this.Names.Name = "Names";
-            this.Names.ReadOnly = true;
-            this.Names.Width = 125;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "缴费";
-            this.costDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            this.costDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // CreateTime
-            // 
-            this.CreateTime.DataPropertyName = "CrateTime";
-            this.CreateTime.HeaderText = "时间";
-            this.CreateTime.MinimumWidth = 6;
-            this.CreateTime.Name = "CreateTime";
-            this.CreateTime.ReadOnly = true;
-            this.CreateTime.Width = 125;
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Enabled = false;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton2.Location = new System.Drawing.Point(1267, 17);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Radius = 20;
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 6;
+            this.uiButton2.Text = "导出";
+            this.uiButton2.Visible = false;
+            this.uiButton2.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // FrmUserPpayment
             // 
@@ -306,6 +322,7 @@ namespace ON4
             this.Controls.Add(this.txtTablenumber);
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.btnPotRed);
+            this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -340,5 +357,6 @@ namespace ON4
         private System.Windows.Forms.DataGridViewTextBoxColumn Names;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreateTime;
+        private Sunny.UI.UIButton uiButton2;
     }
 }

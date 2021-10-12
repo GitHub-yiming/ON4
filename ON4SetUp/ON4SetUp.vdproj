@@ -27,7 +27,31 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2174A3D5D4CC46588F5DB0D6196C021D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_24322AFAAE17DCEDEF76D75EB372EA4F"
+        "OwnerKey" = "8:_3C7AB090A71392AA2F220636DDE9CCDB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_24322AFAAE17DCEDEF76D75EB372EA4F"
+        "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2F041E5CF2F7B2F6571FCBAEFDE80129"
+        "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3C7AB090A71392AA2F220636DDE9CCDB"
         "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,12 +87,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_83CF8F4D8F2E87D1665E5EF9031F96F3"
-        "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_8EFD821BE06246D0B522BEBD5D1C9560"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -99,24 +117,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CF842F5ECAEB4F2FB7A2C5999ADA38A9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EA8E3A82F1BFCA69F9DCDB7071930686"
-        "OwnerKey" = "8:_83CF8F4D8F2E87D1665E5EF9031F96F3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EA8E3A82F1BFCA69F9DCDB7071930686"
-        "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FD3008570408A20A07CAC6ABC3C4271E"
         "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
         "MsmSig" = "8:_UNDEFINED"
@@ -130,13 +130,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_83CF8F4D8F2E87D1665E5EF9031F96F3"
+        "OwnerKey" = "8:_3C7AB090A71392AA2F220636DDE9CCDB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EA8E3A82F1BFCA69F9DCDB7071930686"
+        "OwnerKey" = "8:_24322AFAAE17DCEDEF76D75EB372EA4F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -307,6 +307,57 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2174A3D5D4CC46588F5DB0D6196C021D"
+            {
+            "SourcePath" = "8:..\\ON4\\Cost_Schedule.txt"
+            "TargetName" = "8:Cost_Schedule.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_24322AFAAE17DCEDEF76D75EB372EA4F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Modles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_24322AFAAE17DCEDEF76D75EB372EA4F"
+                    {
+                    "Name" = "8:Modles.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Modles.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2F041E5CF2F7B2F6571FCBAEFDE80129"
             {
             "AssemblyRegister" = "3:1"
@@ -321,6 +372,37 @@
                     }
                 }
             "SourcePath" = "8:SunnyUI.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3C7AB090A71392AA2F220636DDE9CCDB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_3C7AB090A71392AA2F220636DDE9CCDB"
+                    {
+                    "Name" = "8:DAL.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:DAL.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
@@ -418,37 +500,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_83CF8F4D8F2E87D1665E5EF9031F96F3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_83CF8F4D8F2E87D1665E5EF9031F96F3"
-                    {
-                    "Name" = "8:DAL.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:DAL.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8EFD821BE06246D0B522BEBD5D1C9560"
@@ -573,57 +624,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF842F5ECAEB4F2FB7A2C5999ADA38A9"
-            {
-            "SourcePath" = "8:..\\ON4\\bin\\Debug\\Cost_Schedule.txt"
-            "TargetName" = "8:Cost_Schedule.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EA8E3A82F1BFCA69F9DCDB7071930686"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Modles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_EA8E3A82F1BFCA69F9DCDB7071930686"
-                    {
-                    "Name" = "8:Modles.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Modles.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD3008570408A20A07CAC6ABC3C4271E"
             {
             "AssemblyRegister" = "3:1"
@@ -723,7 +723,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ON4"
         "ProductCode" = "8:{2AE58504-FD01-42A3-B20C-5F0B5842606F}"
-        "PackageCode" = "8:{D597157E-92AC-4199-9138-C516331A82A7}"
+        "PackageCode" = "8:{1BD32F70-E56F-4C97-91B6-AA06BF87C7D5}"
         "UpgradeCode" = "8:{4B2A1727-BD5E-4DE3-B5DD-CE51BEAB1C27}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1258,7 +1258,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_035C2EF3BB74485EA14F0EB3031CD47B"
             {
-            "SourcePath" = "8:..\\ON4\\obj\\Debug\\ON4.exe"
+            "SourcePath" = "8:..\\ON4\\obj\\Release\\ON4.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"

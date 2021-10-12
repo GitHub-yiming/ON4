@@ -93,7 +93,26 @@ namespace ON4
             // TODO: 这行代码将数据加载到表“calorimeter1DataSet5.AdvancedView”中。您可以根据需要移动或删除它。
             this.advancedViewTableAdapter.Fill(this.calorimeter1DataSet5.AdvancedView);
 
-            label1.Text = string.Format("Total rows: {0}", this.advancedViewBindingSource.List.Count);
+            label1.Text = string.Format("行数: {0}", this.advancedViewBindingSource.List.Count);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new DataExport().Export(this.advancedDataGridView1);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+             SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.FilterIndex = 1;
+            saveFile.AddExtension = true;
+            saveFile.RestoreDirectory = true;
+            saveFile.Filter = ".xls|.xls";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                NPOIExcelHelper.DataGridViewToExcel(advancedDataGridView1, "测试", saveFile.FileName);
+            }
+            saveFile.Dispose();
         }
     }
 }
