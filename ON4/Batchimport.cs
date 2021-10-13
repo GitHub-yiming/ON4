@@ -23,7 +23,7 @@ namespace ON4
 
             InitializeComponent();
         }
-
+        string fdFileName = string.Empty;
         public void TransferData(string excelFile, string sheetName, string connectionString)
         {
             try
@@ -58,7 +58,7 @@ namespace ON4
                     bcp.SqlRowsCopied += new System.Data.SqlClient.SqlRowsCopiedEventHandler(bcp_SqlRowsCopied);
                     bcp.BatchSize = 100;//每次传输的行数
                     progressBar1.Value = 0;
-                    progressBar1.Value=bcp.NotifyAfter = 100;//进度提示的行数
+                    progressBar1.Value = bcp.NotifyAfter = 100;//进度提示的行数
                     switch (comboBox1.Text)
                     {
                         case "用户信息":
@@ -118,28 +118,30 @@ namespace ON4
         {
             try
             {
-            if (comboBox1.Text != "")
-            {
-            if (fd.ShowDialog() == DialogResult.OK)
-            {
-                switch (comboBox1.Text)
+                if (comboBox1.Text != "")
                 {
-                    case "用户信息":
-                        OpenFile(fd.FileName, "User_data1");
-                        break;
-                    case "表号信息":
-                        OpenFile(fd.FileName, "Table_NumberTest");
-                        break;
-                }
-            }
+                    if (fd.ShowDialog() == DialogResult.OK)
+                    {
+                        switch (comboBox1.Text)
+                        {
+                            case "用户信息":
+                                OpenFile(fd.FileName, "User_data1");
+                                fdFileName = "User_data1";
+                                break;
+                            case "表号信息":
+                                OpenFile(fd.FileName, "Table_NumberTest");
+                                fdFileName = "Table_NumberTest";
+                                break;
+                        }
+                    }
 
-            fd.Dispose();
-            }
-            else
-            {
-                MessageBox.Show("请选择需要打开的表格！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                    fd.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("请选择需要打开的表格！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
             catch (Exception ex)
             {
@@ -169,23 +171,39 @@ namespace ON4
 
             try
             {
-            if (comboBox1.Text != "")
-            {
-            switch (comboBox1.Text)
-            {
-                case "用户信息":
-                    TransferData(fd.FileName, "User_data1", connString);
-                    break;
-                case "表号信息":
-                    TransferData(fd.FileName, "Table_NumberTest", connString);
-                    break;
-            }
-            }
-            else
-            {
-                MessageBox.Show("请选择需要打开的表格！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                if (comboBox1.Text != "")
+                {
+                    switch (comboBox1.Text)
+                    {
+                        case "用户信息":
+                            if (fdFileName == "User_data1")
+                            {
+                                TransferData(fd.FileName, "User_data1", connString);
+                            }
+                            else
+                            {
+                                MessageBox.Show("导入的信息有误！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
+                            break;
+                        case "表号信息":
+                            if (fdFileName == "Table_NumberTest")
+                            {
+                                TransferData(fd.FileName, "Table_NumberTest", connString);
+                            }
+                            else
+                            {
+                                MessageBox.Show("导入的信息有误！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请选择需要打开的表格！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
             catch (Exception ex)
             {

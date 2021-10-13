@@ -35,12 +35,9 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
-            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Room_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Building = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coolingcapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dosage_Cooling_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cooling_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost_Cooling_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,16 +45,19 @@ namespace ON4
             this.Calories_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost_Calories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coolingcapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advancedViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calorimeter1DataSet5 = new ON4.Calorimeter1DataSet5();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.calorimeterTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calorimeter1DataSet1 = new ON4.Calorimeter1DataSet1();
             this.calorimeterTable1TableAdapter = new ON4.Calorimeter1DataSet1TableAdapters.CalorimeterTable1TableAdapter();
             this.advancedViewTableAdapter = new ON4.Calorimeter1DataSet5TableAdapters.AdvancedViewTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet5)).BeginInit();
@@ -77,8 +77,7 @@ namespace ON4
             // 
             // advancedDataGridView1
             // 
-            this.advancedDataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.advancedDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.advancedDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -115,15 +114,6 @@ namespace ON4
             this.advancedDataGridView1.FilterStringChanged += new System.EventHandler(this.advancedDataGridView1_FilterStringChanged);
             this.advancedDataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.advancedDataGridView1_RowPostPaint);
             // 
-            // tablenumberDataGridViewTextBoxColumn
-            // 
-            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
-            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
-            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
-            this.tablenumberDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Names
             // 
             this.Names.DataPropertyName = "Names";
@@ -150,24 +140,6 @@ namespace ON4
             this.Building.Name = "Building";
             this.Building.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Building.Width = 125;
-            // 
-            // coolingcapacityDataGridViewTextBoxColumn
-            // 
-            this.coolingcapacityDataGridViewTextBoxColumn.DataPropertyName = "Cooling_capacity";
-            this.coolingcapacityDataGridViewTextBoxColumn.HeaderText = "总冷量Kwh";
-            this.coolingcapacityDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.coolingcapacityDataGridViewTextBoxColumn.Name = "coolingcapacityDataGridViewTextBoxColumn";
-            this.coolingcapacityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.coolingcapacityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // caloriesDataGridViewTextBoxColumn
-            // 
-            this.caloriesDataGridViewTextBoxColumn.DataPropertyName = "Calories";
-            this.caloriesDataGridViewTextBoxColumn.HeaderText = "总热量Kwh";
-            this.caloriesDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.caloriesDataGridViewTextBoxColumn.Name = "caloriesDataGridViewTextBoxColumn";
-            this.caloriesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.caloriesDataGridViewTextBoxColumn.Width = 125;
             // 
             // Dosage_Cooling_capacity
             // 
@@ -237,25 +209,6 @@ namespace ON4
             this.Total_cost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Total_cost.Width = 125;
             // 
-            // createTimeDataGridViewTextBoxColumn
-            // 
-            this.createTimeDataGridViewTextBoxColumn.DataPropertyName = "CreateTime";
-            this.createTimeDataGridViewTextBoxColumn.HeaderText = "记录时间";
-            this.createTimeDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.createTimeDataGridViewTextBoxColumn.Name = "createTimeDataGridViewTextBoxColumn";
-            this.createTimeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.createTimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // advancedViewBindingSource
-            // 
-            this.advancedViewBindingSource.DataMember = "AdvancedView";
-            this.advancedViewBindingSource.DataSource = this.calorimeter1DataSet5;
-            // 
-            // calorimeter1DataSet5
-            // 
-            this.calorimeter1DataSet5.DataSetName = "Calorimeter1DataSet5";
-            this.calorimeter1DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button1
             // 
             this.button1.Enabled = false;
@@ -278,6 +231,62 @@ namespace ON4
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(239, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 28);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "&导出";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // tablenumberDataGridViewTextBoxColumn
+            // 
+            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
+            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
+            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
+            this.tablenumberDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // coolingcapacityDataGridViewTextBoxColumn
+            // 
+            this.coolingcapacityDataGridViewTextBoxColumn.DataPropertyName = "Cooling_capacity";
+            this.coolingcapacityDataGridViewTextBoxColumn.HeaderText = "总冷量Kwh";
+            this.coolingcapacityDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.coolingcapacityDataGridViewTextBoxColumn.Name = "coolingcapacityDataGridViewTextBoxColumn";
+            this.coolingcapacityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.coolingcapacityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // caloriesDataGridViewTextBoxColumn
+            // 
+            this.caloriesDataGridViewTextBoxColumn.DataPropertyName = "Calories";
+            this.caloriesDataGridViewTextBoxColumn.HeaderText = "总热量Kwh";
+            this.caloriesDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.caloriesDataGridViewTextBoxColumn.Name = "caloriesDataGridViewTextBoxColumn";
+            this.caloriesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.caloriesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // createTimeDataGridViewTextBoxColumn
+            // 
+            this.createTimeDataGridViewTextBoxColumn.DataPropertyName = "CreateTime";
+            this.createTimeDataGridViewTextBoxColumn.HeaderText = "记录时间";
+            this.createTimeDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.createTimeDataGridViewTextBoxColumn.Name = "createTimeDataGridViewTextBoxColumn";
+            this.createTimeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.createTimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // advancedViewBindingSource
+            // 
+            this.advancedViewBindingSource.DataMember = "AdvancedView";
+            this.advancedViewBindingSource.DataSource = this.calorimeter1DataSet5;
+            // 
+            // calorimeter1DataSet5
+            // 
+            this.calorimeter1DataSet5.DataSetName = "Calorimeter1DataSet5";
+            this.calorimeter1DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // calorimeterTable1BindingSource
             // 
             this.calorimeterTable1BindingSource.DataMember = "CalorimeterTable1";
@@ -296,16 +305,6 @@ namespace ON4
             // advancedViewTableAdapter
             // 
             this.advancedViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(239, 36);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 28);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "&导出";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // FrmInquire_User_and_TableNumber
             // 

@@ -34,13 +34,8 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvScoreList = new Sunny.UI.UIDataGridView();
-            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumberofLayersId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userbalanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRefresh = new Sunny.UI.UIButton();
             this.btnModify_quota = new Sunny.UI.UIButton();
             this.btnUnified_modification = new Sunny.UI.UIButton();
@@ -57,19 +52,23 @@ namespace ON4
             this.btnLay = new Sunny.UI.UIButton();
             this.btnTablenumber = new Sunny.UI.UIButton();
             this.btnEdit = new Sunny.UI.UIButton();
+            this.uiButton2 = new Sunny.UI.UIButton();
             this.viewuserbalanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calorimeter1DataSet3 = new ON4.Calorimeter1DataSet3();
             this.view_user_balanceTableAdapter = new ON4.Calorimeter1DataSet3TableAdapters.View_user_balanceTableAdapter();
-            this.uiButton2 = new Sunny.UI.UIButton();
+            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userbalanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userbalanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewuserbalanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userbalanceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvScoreList
             // 
-            this.dgvScoreList.AllowUserToAddRows = false;
             this.dgvScoreList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvScoreList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -102,7 +101,6 @@ namespace ON4
             this.dgvScoreList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgvScoreList.Location = new System.Drawing.Point(6, 53);
             this.dgvScoreList.Name = "dgvScoreList";
-            this.dgvScoreList.ReadOnly = true;
             this.dgvScoreList.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             this.dgvScoreList.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -113,33 +111,6 @@ namespace ON4
             this.dgvScoreList.TabIndex = 0;
             this.dgvScoreList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvScoreList_RowPostPaint);
             // 
-            // tablenumberDataGridViewTextBoxColumn
-            // 
-            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
-            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
-            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
-            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namesDataGridViewTextBoxColumn
-            // 
-            this.namesDataGridViewTextBoxColumn.DataPropertyName = "Names";
-            this.namesDataGridViewTextBoxColumn.HeaderText = "姓名";
-            this.namesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namesDataGridViewTextBoxColumn.Name = "namesDataGridViewTextBoxColumn";
-            this.namesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // balanceDataGridViewTextBoxColumn
-            // 
-            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
-            this.balanceDataGridViewTextBoxColumn.HeaderText = "余额";
-            this.balanceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
-            this.balanceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.balanceDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Quota
             // 
             this.Quota.DataPropertyName = "Quota";
@@ -149,15 +120,6 @@ namespace ON4
             this.Quota.ReadOnly = true;
             this.Quota.Width = 125;
             // 
-            // roomNoDataGridViewTextBoxColumn
-            // 
-            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "Room_No";
-            this.roomNoDataGridViewTextBoxColumn.HeaderText = "房号";
-            this.roomNoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
-            this.roomNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roomNoDataGridViewTextBoxColumn.Width = 125;
-            // 
             // NumberofLayersId
             // 
             this.NumberofLayersId.DataPropertyName = "NumberofLayersId";
@@ -166,10 +128,6 @@ namespace ON4
             this.NumberofLayersId.Name = "NumberofLayersId";
             this.NumberofLayersId.ReadOnly = true;
             this.NumberofLayersId.Width = 125;
-            // 
-            // userbalanceBindingSource
-            // 
-            this.userbalanceBindingSource.DataSource = typeof(ON4.User_balance);
             // 
             // btnRefresh
             // 
@@ -402,20 +360,6 @@ namespace ON4
             this.btnEdit.Text = "编辑";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // viewuserbalanceBindingSource
-            // 
-            this.viewuserbalanceBindingSource.DataMember = "View_user_balance";
-            this.viewuserbalanceBindingSource.DataSource = this.calorimeter1DataSet3;
-            // 
-            // calorimeter1DataSet3
-            // 
-            this.calorimeter1DataSet3.DataSetName = "Calorimeter1DataSet3";
-            this.calorimeter1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // view_user_balanceTableAdapter
-            // 
-            this.view_user_balanceTableAdapter.ClearBeforeFill = true;
-            // 
             // uiButton2
             // 
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -430,6 +374,60 @@ namespace ON4
             this.uiButton2.Text = "导出";
             this.uiButton2.Visible = false;
             this.uiButton2.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
+            // viewuserbalanceBindingSource
+            // 
+            this.viewuserbalanceBindingSource.DataMember = "View_user_balance";
+            this.viewuserbalanceBindingSource.DataSource = this.calorimeter1DataSet3;
+            // 
+            // calorimeter1DataSet3
+            // 
+            this.calorimeter1DataSet3.DataSetName = "Calorimeter1DataSet3";
+            this.calorimeter1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // view_user_balanceTableAdapter
+            // 
+            this.view_user_balanceTableAdapter.ClearBeforeFill = true;
+            // 
+            // tablenumberDataGridViewTextBoxColumn
+            // 
+            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
+            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
+            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
+            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // namesDataGridViewTextBoxColumn
+            // 
+            this.namesDataGridViewTextBoxColumn.DataPropertyName = "Names";
+            this.namesDataGridViewTextBoxColumn.HeaderText = "姓名";
+            this.namesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namesDataGridViewTextBoxColumn.Name = "namesDataGridViewTextBoxColumn";
+            this.namesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // balanceDataGridViewTextBoxColumn
+            // 
+            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
+            this.balanceDataGridViewTextBoxColumn.HeaderText = "余额";
+            this.balanceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            this.balanceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.balanceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // roomNoDataGridViewTextBoxColumn
+            // 
+            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "Room_No";
+            this.roomNoDataGridViewTextBoxColumn.HeaderText = "房号";
+            this.roomNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
+            this.roomNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roomNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userbalanceBindingSource
+            // 
+            this.userbalanceBindingSource.DataSource = typeof(ON4.User_balance);
             // 
             // FrmTotalExpenses
             // 
@@ -459,9 +457,9 @@ namespace ON4
             this.Text = "费用统计";
             this.Load += new System.EventHandler(this.FrmTotalExpenses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userbalanceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewuserbalanceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calorimeter1DataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userbalanceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

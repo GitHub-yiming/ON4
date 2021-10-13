@@ -34,11 +34,8 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userpayment1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDelete = new Sunny.UI.UIButton();
             this.btnEdit = new Sunny.UI.UIButton();
             this.btnAdd = new Sunny.UI.UIButton();
@@ -51,13 +48,15 @@ namespace ON4
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.btnName = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
+            this.tablenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userpayment1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpayment1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiDataGridView1
             // 
-            this.uiDataGridView1.AllowUserToAddRows = false;
             this.uiDataGridView1.AllowUserToDeleteRows = false;
             this.uiDataGridView1.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
@@ -89,7 +88,6 @@ namespace ON4
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.Location = new System.Drawing.Point(0, 63);
             this.uiDataGridView1.Name = "uiDataGridView1";
-            this.uiDataGridView1.ReadOnly = true;
             this.uiDataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -100,15 +98,6 @@ namespace ON4
             this.uiDataGridView1.TabIndex = 0;
             this.uiDataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.uiDataGridView1_RowPostPaint);
             // 
-            // tablenumberDataGridViewTextBoxColumn
-            // 
-            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
-            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
-            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
-            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Names
             // 
             this.Names.DataPropertyName = "Names";
@@ -118,15 +107,6 @@ namespace ON4
             this.Names.ReadOnly = true;
             this.Names.Width = 125;
             // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "缴费";
-            this.costDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            this.costDataGridViewTextBoxColumn.Width = 125;
-            // 
             // CreateTime
             // 
             this.CreateTime.DataPropertyName = "CrateTime";
@@ -135,10 +115,6 @@ namespace ON4
             this.CreateTime.Name = "CreateTime";
             this.CreateTime.ReadOnly = true;
             this.CreateTime.Width = 125;
-            // 
-            // userpayment1BindingSource
-            // 
-            this.userpayment1BindingSource.DataSource = typeof(ON4.User_payment1);
             // 
             // btnDelete
             // 
@@ -309,6 +285,28 @@ namespace ON4
             this.uiButton2.Text = "导出";
             this.uiButton2.Visible = false;
             this.uiButton2.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
+            // tablenumberDataGridViewTextBoxColumn
+            // 
+            this.tablenumberDataGridViewTextBoxColumn.DataPropertyName = "Table_number";
+            this.tablenumberDataGridViewTextBoxColumn.HeaderText = "表号";
+            this.tablenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tablenumberDataGridViewTextBoxColumn.Name = "tablenumberDataGridViewTextBoxColumn";
+            this.tablenumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tablenumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "缴费";
+            this.costDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userpayment1BindingSource
+            // 
+            this.userpayment1BindingSource.DataSource = typeof(ON4.User_payment1);
             // 
             // FrmUserPpayment
             // 

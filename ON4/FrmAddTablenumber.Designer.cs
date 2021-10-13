@@ -34,11 +34,8 @@ namespace ON4
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvScoreList = new Sunny.UI.UIDataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ControlAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Port_diection = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableNumbers1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTablenumber = new Sunny.UI.UITextBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.btnTablenumber = new Sunny.UI.UIButton();
@@ -51,13 +48,15 @@ namespace ON4
             this.uiButton1 = new Sunny.UI.UIButton();
             this.btnRefresh = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableNumbers1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableNumbers1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvScoreList
             // 
-            this.dgvScoreList.AllowUserToAddRows = false;
             this.dgvScoreList.AllowUserToDeleteRows = false;
             this.dgvScoreList.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
@@ -90,7 +89,6 @@ namespace ON4
             this.dgvScoreList.Location = new System.Drawing.Point(0, 52);
             this.dgvScoreList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvScoreList.Name = "dgvScoreList";
-            this.dgvScoreList.ReadOnly = true;
             this.dgvScoreList.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             this.dgvScoreList.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -100,24 +98,6 @@ namespace ON4
             this.dgvScoreList.Size = new System.Drawing.Size(1456, 689);
             this.dgvScoreList.TabIndex = 2;
             this.dgvScoreList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvScoreList_RowPostPaint);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Table_Number1";
-            this.dataGridViewTextBoxColumn1.HeaderText = "表号";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NumberofLayersId";
-            this.dataGridViewTextBoxColumn2.HeaderText = "楼层";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // ControlAddress
             // 
@@ -136,10 +116,6 @@ namespace ON4
             this.Port_diection.Name = "Port_diection";
             this.Port_diection.ReadOnly = true;
             this.Port_diection.Width = 125;
-            // 
-            // tableNumbers1BindingSource
-            // 
-            this.tableNumbers1BindingSource.DataSource = typeof(ON4.Table_Numbers1);
             // 
             // txtTablenumber
             // 
@@ -317,6 +293,28 @@ namespace ON4
             this.uiButton2.TabIndex = 10;
             this.uiButton2.Text = "导出";
             this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Table_Number1";
+            this.dataGridViewTextBoxColumn1.HeaderText = "表号";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NumberofLayersId";
+            this.dataGridViewTextBoxColumn2.HeaderText = "楼层";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // tableNumbers1BindingSource
+            // 
+            this.tableNumbers1BindingSource.DataSource = typeof(ON4.Table_Numbers1);
             // 
             // FrmAddTablenumber
             // 

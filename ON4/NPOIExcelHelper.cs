@@ -54,6 +54,8 @@ public class NPOIExcelHelper
 
     public static void DataGridViewToExcel(UIDataGridView myDgv, string strHeaderText, string strFileName)
     {
+        try
+        {
         using (MemoryStream ms = DataGridViewToExcel(myDgv, strHeaderText))
         {
             using (FileStream fs = new FileStream(strFileName, FileMode.Create, FileAccess.Write))
@@ -63,6 +65,13 @@ public class NPOIExcelHelper
                 fs.Flush();
             }
         }
+        }
+        catch (System.Exception ex)
+        {
+
+            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 
     /// <summary>
