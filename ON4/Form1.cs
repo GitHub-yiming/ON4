@@ -38,7 +38,7 @@ namespace ON4
         //FrmValve_control frmValve_Control = new FrmValve_control();
 
         //记录秒数
-        int AddTimer = 0;
+        //int AddTimer = 0;
 
         //记录电表返回延迟时间
         int AddNum = 0;
@@ -190,7 +190,7 @@ namespace ON4
                 }
                 if (frmMonitor.port == null&&bo==false)
                 {
-                    frmMonitor.Yz(frmMonitor.serialPort1, 1);
+                    frmMonitor.SerialPortReceived(frmMonitor.serialPort1, 1);
                     frmMonitor.port.Write(data1.Common_meter_reading(frmMonitor.vs[frmMonitor.bb]), 0, data1.Common_meter_reading(frmMonitor.vs[frmMonitor.bb]).Length);
                     frmMonitor.bb++;
                     frmMonitor.hh.Clear();

@@ -21,7 +21,6 @@ namespace ON4
     {
 
         User_dataService objUser_dataService = new User_dataService();
-
         Data1 data1 = new Data1();
         FrmTotalExpenses objfrmTotalExpenses = new FrmTotalExpenses();
         FrmValve_control frmValve_Control1 = new FrmValve_control();
@@ -42,7 +41,7 @@ namespace ON4
 
         string timer223 = "";//下一次记录时间
         public bool ii = true, hu = true;
-        public  string[] vs;//保存当前电表
+        public string[] vs;//保存当前电表
         //int tt = vs.Length;//保存当前数
         //string[] vs2;//电表总数
         public int vs1 = 3;//表号类型(对应楼层数)
@@ -61,10 +60,10 @@ namespace ON4
         {
             if (this.cboFloor.SelectedIndex == -1)
             {
-                MessageBox.Show("请首先选择要查询的班级！", "查询提示");
+                MessageBox.Show("请首先选择要查询的表号！", "查询提示");
                 return;
             }
-            this.dgvScoreList1.DataSource = objUser_dataService.GetStudentByClass(this.cboFloor.Text.Trim());
+            this.dgvScoreList1.DataSource = objUser_dataService.GetInfoByFloor(this.cboFloor.Text.Trim());
         }
 
         /// <summary>
@@ -98,21 +97,21 @@ namespace ON4
         /// <param name="e"></param>
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            Yz(serialPort1, 1);
+            SerialPortReceived(serialPort1, 1);
         }
         private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            Yz(serialPort2, 2);
+            SerialPortReceived(serialPort2, 2);
         }
 
         private void serialPort3_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            Yz(serialPort3, 3);
+            SerialPortReceived(serialPort3, 3);
         }
 
         private void serialPort4_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            Yz(serialPort4, 4);
+            SerialPortReceived(serialPort4, 4);
         }
 
         #region 数据读取
@@ -125,7 +124,7 @@ namespace ON4
         /// </summary>
         /// <param name="serialPort">串口</param>
         /// <param name="num"></param>
-        public void Yz(SerialPort serialPort, int num)
+        public void SerialPortReceived(SerialPort serialPort, int num)
         {
 
             port = serialPort;
@@ -151,92 +150,68 @@ namespace ON4
 
             //对数据进行验证，满足后才可继续执行
             //不满足就清除hh中的数据
-            //hh.ToArray()[17].ToString().Length != 0 && hh.ToArray()[17].ToString("X2") == "1F"
-            //hh.ToArray()[64].ToString("X2")=="16"||hh.ToArray()[63].ToString("X2")=="16"
-
             try
             {
-
-                if (true)
-            {
-                if (hh.ToArray().Length >= 64 &&hh.ToArray().Length <=65)
+                if (hh.ToArray().Length >= 64 && hh.ToArray().Length <= 65)
                 {
-                    //判断当前是否在记录中，如果是就把数据写入到数据库中
-                    //如果不是在记录中，那么读取到的数据就只在监控界面中显示
-                    if (btnRecording.Text == "记录中...")
+                    if (data1.XSummation_check_2(hh.ToArray()) == hh[63] || data1.XSummation_check_2(hh.ToArray()) == hh[62])
                     {
-
-                        string[] gg = Ordinary_meter_reading(hh.ToArray());//解析报文数据
-
-                        data1.Fddd(gg);//写入数据库
-
-                        #region 判断是否“启用计费”
-
-                        if (Settings.Default.启用计费)
+                        //判断当前是否在记录中，如果是就把数据写入到数据库中
+                        //如果不是在记录中，那么读取到的数据就只在监控界面中显示
+                        if (btnRecording.Text == "记录中...")
                         {
-                            objUser_dataService.QueryScoreList1(vs[bb - 1]); //更新用户余额
-                        }
 
-                        #endregion
-
-                        #region 判断是否启用继电器控制
-                        if (Settings.Default.启用继电器控制)
-                        {
-                            if (objUser_dataService.Quota_calculation(vs[bb - 1]) == "信用超额")
+                            string[] gg = Ordinary_meter_reading(hh.ToArray());//解析报文数据
+                            if (gg != null)
                             {
-                                ValveControl(vs[bb - 1], 1);//关闭阀门
-                            }
-                            else
-                            {
-                                ValveControl(vs[bb - 1], 0);//打开阀门
-                            }
-                        }
-                        #endregion
-
-                        if (uiComboBox9.Text == "全部")
-                        {
-                            #region 循环读取所有楼层的表号，直到结束
-                            //判断当前楼层的表号数量是否与bb是否相等，相等就往下个一楼层增加
-                            //否则就继续读取当前楼层剩余的表号
-                            if (bb == data1.SQL_table_number_read(vs1).Length)
-                            {
-                                bb = 1;
-                                vs2++;
-                                vs1++;
-                                //获取数据库中所有楼层的总和，并与vs2比较，如果相等就退出循环
-                                //不相等就继续读取表号
-                                if (vs2 == data1.SQL_table_number_read1().Length)
+                                if (Convert.ToDouble(gg[1]) >= objUser_dataService.QueryMax(gg[0]))
                                 {
-                                    hu = true;
-                                    this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
-                                    btnSave_Click(null, null);
-                                    this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
-                                    vs1 = 3;
-                                    vs2 = 0;
-                                    bb = 1;
-                                    this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
-
+                                    data1.Fddd(gg);//写入数据库
                                 }
                                 else
                                 {
-                                    vs = data1.SQL_table_number_read(vs1);
-                                    //如果当前读取的楼层的表号为空，那么就跳过此次楼层，继续读取下一个楼层
-                                    for (int i = 0; vs.Length == 0; i++)
-                                    {
-                                        vs1++;
-                                        vs = data1.SQL_table_number_read(vs1);
-                                        //读取到的表号不为空就跳出循环
-                                        if (vs.Length != 0)
-                                            break;
-                                        //数据库的楼层总数等于VS1就跳出循环
-                                        if (vs1 == data1.SQL_table_number_read1().Length + 1)
-                                            break;
-                                    }
-                                    if (vs.Length != 0)
-                                        Senddata(vs1);
-                                    //bb=0;
-                                    //hh.Clear();
-                                    if (vs2 == data1.SQL_table_number_read1().Length + 2)
+                                    return;
+                                }
+
+                            }
+
+
+                            #region 判断是否“启用计费”
+
+                            if (Settings.Default.启用计费)
+                            {
+                                objUser_dataService.QueryScoreList1(vs[bb - 1]); //更新用户余额
+                            }
+
+                            #endregion
+
+                            #region 判断是否启用继电器控制
+                            if (Settings.Default.启用继电器控制)
+                            {
+                                if (objUser_dataService.Quota_calculation(vs[bb - 1]) == "信用超额")
+                                {
+                                    ValveControl(vs[bb - 1], 1);//关闭阀门
+                                }
+                                else
+                                {
+                                    ValveControl(vs[bb - 1], 0);//打开阀门
+                                }
+                            }
+                            #endregion
+
+                            if (uiComboBox9.Text == "全部")
+                            {
+                                #region 循环读取所有楼层的表号，直到结束
+                                //判断当前楼层的表号数量是否与bb是否相等，相等就往下个一楼层增加
+                                //否则就继续读取当前楼层剩余的表号
+                                if (bb == data1.SQL_table_number_read(vs1).Length)
+                                {
+                                    bb = 1;
+                                    vs2++;
+                                    vs1++;
+                                    //获取数据库中所有楼层的总和，并与vs2比较，如果相等就退出循环
+                                    //不相等就继续读取表号
+                                    if (vs2 == data1.SQL_table_number_read1().Length)
                                     {
                                         hu = true;
                                         this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
@@ -246,132 +221,161 @@ namespace ON4
                                         vs2 = 0;
                                         bb = 1;
                                         this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
+
                                     }
+                                    else
+                                    {
+                                        vs = data1.SQL_table_number_read(vs1);
+                                        //如果当前读取的楼层的表号为空，那么就跳过此次楼层，继续读取下一个楼层
+                                        for (int i = 0; vs.Length == 0; i++)
+                                        {
+                                            vs1++;
+                                            vs = data1.SQL_table_number_read(vs1);
+                                            //读取到的表号不为空就跳出循环
+                                            if (vs.Length != 0)
+                                                break;
+                                            //数据库的楼层总数等于VS1就跳出循环
+                                            if (vs1 == data1.SQL_table_number_read1().Length + 1)
+                                                break;
+                                        }
+                                        if (vs.Length != 0)
+                                            Senddata(vs1);
+                                        //bb=0;
+                                        //hh.Clear();
+                                        if (vs2 == data1.SQL_table_number_read1().Length + 2)
+                                        {
+                                            hu = true;
+                                            this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
+                                            btnSave_Click(null, null);
+                                            this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
+                                            vs1 = 3;
+                                            vs2 = 0;
+                                            bb = 1;
+                                            this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
+                                        }
+                                    }
+
+                                }
+                                else
+                                {
+                                    serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
+                                    bb++;
+                                    hh.Clear();
+                                }
+
+                                #endregion
+                            }
+
+                            #region 楼层三
+                            if (uiComboBox9.Text == "楼层三")
+                            {
+                                if (data1.SQL_table_number_read(3).Length == bb)
+                                {
+                                    bb = 1;
+                                    this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
+                                    btnSave_Click(null, null);
+                                    this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
+                                    //vs1 = 1;
+                                    this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
+                                }
+                                else
+                                {
+                                    serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
+                                    bb++;
+                                    hh.Clear();
                                 }
 
                             }
-                            else
+                            #endregion
+
+                            #region 楼层四
+
+                            if (uiComboBox9.Text == "楼层四")
                             {
-                                serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
-                                bb++;
-                                hh.Clear();
+                                if (data1.SQL_table_number_read(4).Length == bb)
+                                {
+                                    bb = 1;
+                                    this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
+                                    btnSave_Click(null, null);
+                                    this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
+                                    //vs1 = 1;
+                                    this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
+                                }
+                                else
+                                {
+                                    //循环发送三次
+                                    //for (int i = 0; i < 3; i++)
+                                    //{
+                                    //    serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
+                                    //    Thread.Sleep(1000);
+                                    //}
+                                    serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
+                                    bb++;
+                                    hh.Clear();
+                                }
+
+
                             }
 
                             #endregion
-                        }
 
-                        #region 楼层三
-                        if (uiComboBox9.Text == "楼层三")
-                        {
-                            if (data1.SQL_table_number_read(3).Length == bb)
+                            #region 楼层五
+                            if (uiComboBox9.Text == "楼层五")
                             {
-                                bb = 1;
-                                this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
-                                btnSave_Click(null, null);
-                                this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
-                                //vs1 = 1;
-                                this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
-                            }
-                            else
-                            {
-                                serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
-                                bb++;
-                                hh.Clear();
-                            }
-
-                        }
-                        #endregion
-
-                        #region 楼层四
-
-                        if (uiComboBox9.Text == "楼层四")
-                        {
-                            if (data1.SQL_table_number_read(4).Length == bb)
-                            {
-                                bb = 1;
-                                this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
-                                btnSave_Click(null, null);
-                                this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
-                                //vs1 = 1;
-                                this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
-                            }
-                            else
-                            {
-                                //循环发送三次
-                                //for (int i = 0; i < 3; i++)
-                                //{
-                                //    serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
-                                //    Thread.Sleep(1000);
-                                //}
-                                serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
-                                bb++;
-                                hh.Clear();
-                            }
-
-
-                        }
-
-                        #endregion
-
-                        #region 楼层五
-                        if (uiComboBox9.Text == "楼层五")
-                        {
-                            if (data1.SQL_table_number_read(5).Length == bb)
-                            {
-                                bb = 1;
-                                this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
-                                btnSave_Click(null, null);
-                                this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
-                                //vs1 = 1;
-                                this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
-                            }
-                            else
-                            {
+                                if (data1.SQL_table_number_read(5).Length == bb)
+                                {
+                                    bb = 1;
+                                    this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
+                                    btnSave_Click(null, null);
+                                    this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
+                                    //vs1 = 1;
+                                    this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
+                                }
+                                else
+                                {
                                     serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
                                     bb++;
                                     hh.Clear();
                                 }
 
 
-                        }
-                        #endregion
-
-                        #region 楼层六
-                        if (uiComboBox9.Text == "楼层六")
-                        {
-                            if (data1.SQL_table_number_read(6).Length == bb)
-                            {
-                                bb = 1;
-                                this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
-                                btnSave_Click(null, null);
-                                this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
-                                //vs1 = 1;
-                                this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
                             }
-                            else
+                            #endregion
+
+                            #region 楼层六
+                            if (uiComboBox9.Text == "楼层六")
                             {
+                                if (data1.SQL_table_number_read(6).Length == bb)
+                                {
+                                    bb = 1;
+                                    this.btnRecording.Invoke(new Action<bool>(s => { btnRecording.Enabled = s; }), true);
+                                    btnSave_Click(null, null);
+                                    this.btnRecording.Invoke(new Action<string>(s => { btnRecording.Text = s; }), "立即记录");
+                                    //vs1 = 1;
+                                    this.label2.Invoke(new Action<string>(s => { label2.Text = s; }), "当前未在记录");
+                                }
+                                else
+                                {
                                     serialPort.Write(data1.Common_meter_reading(vs[bb]), 0, data1.Common_meter_reading(vs[bb]).Length);
                                     bb++;
                                     hh.Clear();
                                 }
 
 
+                            }
+                            #endregion
+
                         }
-                        #endregion
-
+                        else
+                        {
+                            //如果不在记录中...就不写入数据库，只在界面中显示
+                            Ordinary_meter_reading(hh.ToArray());
+                            //objUser_dataService.QueryScoreList1(txtTableNumber1.Text.Trim());//更新用户余额
+                            hh.Clear();
+                        }
                     }
-                    else
-                    {
-                        //如果不在记录中...就不写入数据库，只在界面中显示
-                        Ordinary_meter_reading(hh.ToArray());
-                        //objUser_dataService.QueryScoreList1(txtTableNumber1.Text.Trim());//更新用户余额
-                        hh.Clear();
-                    }
-
 
                 }
-            }
-
 
             }
             catch (Exception ex)
@@ -385,7 +389,7 @@ namespace ON4
         #endregion
 
         #region 单层
-        public void Yz(SerialPort serialPort, string num)
+        public void SerialPortReceived(SerialPort serialPort, string num)
         {
 
         }
@@ -466,22 +470,22 @@ namespace ON4
         {
 
 
-                int n = 0;
-                for (int i = 0; i < hh.Length; i++)
+            int n = 0;
+            for (int i = 0; i < hh.Length; i++)
+            {
+                if (hh[i].ToString("X2") == "FE")
                 {
-                    if (hh[i].ToString("X2") == "FE")
-                    {
-                        n++;
-                    }
+                    n++;
                 }
-                //vs是去除了FE和校验码之后的数据
-                byte[] vsS = new byte[hh.Length - (n + 2)];
-                Array.Copy(hh, n, vsS, 0, hh.Length - (n + 2));
-                //uiDataGridView1.Rows[0].Cells[0].Value = vs[0].ToString("X2");
-                for (int i = 0; i < data1.Ordinary_message_analysis_2(vsS).Length; i++)
-                {
-                    uiDataGridView1.Rows[0].Cells[i].Value = data1.Ordinary_message_analysis_2(vsS)[i];
-                }
+            }
+            //vs是去除了FE和校验码之后的数据
+            byte[] vsS = new byte[hh.Length - (n + 2)];
+            Array.Copy(hh, n, vsS, 0, hh.Length - (n + 2));
+            //uiDataGridView1.Rows[0].Cells[0].Value = vs[0].ToString("X2");
+            for (int i = 0; i < data1.Ordinary_message_analysis_2(vsS).Length; i++)
+            {
+                uiDataGridView1.Rows[0].Cells[i].Value = data1.Ordinary_message_analysis_2(vsS)[i];
+            }
 
             return data1.Ordinary_message_analysis_2(vsS);
         }
@@ -776,7 +780,7 @@ namespace ON4
                     {
                         if (Settings.Default.启用继电器控制)
                         {
-                            if (serialPort5.IsOpen && serialPort6.IsOpen && serialPort7.IsOpen && serialPort8.IsOpen&&serialPort9.IsOpen&&serialPort10.IsOpen&&serialPort11.IsOpen&&serialPort12.IsOpen)
+                            if (serialPort5.IsOpen && serialPort6.IsOpen && serialPort7.IsOpen && serialPort8.IsOpen && serialPort9.IsOpen && serialPort10.IsOpen && serialPort11.IsOpen && serialPort12.IsOpen)
                             {
                                 MessageBox.Show("楼层串口与继电器串口未全部打开！ 请检查串口！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return;
@@ -801,6 +805,13 @@ namespace ON4
                                     Sends(i);
                                     break;
                                 }
+                                //if(i==new NumberofLayerService().GetAllnum()+1)
+                                //{
+                                //    btnRecording.Enabled = true;
+                                //    btnRecording.Text = "立刻记录";
+                                //    MessageBox.Show("用户信息中无任何楼层信息！检查用户信息", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                //    return;
+                                //}
                             }
                         }
                     }
@@ -1132,7 +1143,7 @@ namespace ON4
             {
                 //int HourTimer = Convert.ToInt32(Settings.Default.小时触发) - DateTime.Now.Hour;
                 //timer223 = DateTime.Now.AddHours(Convert.ToDouble(HourTimer)).ToString("yyyy年MM月dd日hh时");
-                timer223 = DateTime.Now.ToString("yyyy年MM月dd日") + uiComboBox1.Text+"时";
+                timer223 = DateTime.Now.ToString("yyyy年MM月dd日") + uiComboBox1.Text + "时";
             }
             else
             {

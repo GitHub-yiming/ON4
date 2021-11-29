@@ -51,7 +51,7 @@ namespace ON4
                     e.Cancel = true;
                     return;
                 }
-                if (objUser_dataService.NotUserRepeat(textBox1.Text.Trim()))
+                if (objUser_dataService.NotUserRepeat(textBox1.Text.Trim())&&mode)
                 {
                     MessageBox.Show("用户已存在！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBox1.Focus();

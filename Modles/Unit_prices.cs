@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modles
 {
+    //单价类
    public class Unit_prices
     {
         public decimal Calories { get; set; }

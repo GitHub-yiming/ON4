@@ -35,9 +35,9 @@ namespace ON4
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(comboBox1.Text)||string.IsNullOrEmpty(txtControlAddress.Text)/* || objUser_dataService.IsTableNumber(textBox1.Text.Trim())*/)
+                if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(txtControlAddress.Text) || string.IsNullOrEmpty(textBox2.Text))
                 {
-                    MessageBox.Show("表号为空\t或者表号重复\t或者未选中楼层！\n请检查！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("表号为空\t或者表号重复\t或者未选中楼层！\t或端口为空\n请检查！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBox1.Focus();
                     e.Cancel = true;
                     return;

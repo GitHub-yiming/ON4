@@ -52,7 +52,7 @@ namespace ON4
             };
             try
             {
-                objuser_Balancess.ModifyStudent(objuser_Balances);
+                objuser_Balancess.ModifyPrice(objuser_Balances);
                 MessageBox.Show("保存成功！！", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

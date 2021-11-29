@@ -41,16 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataMove.cs" />
     <Compile Include="NumberofLayers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Table_Numbers.cs" />
-    <Compile Include="Total_expenses.cs" />
     <Compile Include="Unit_prices.cs" />
     <Compile Include="User_balances.cs" />
     <Compile Include="User_data.cs" />
     <Compile Include="User_payment1.cs" />
-    <Compile Include="View_user_balance.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

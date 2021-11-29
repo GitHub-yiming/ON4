@@ -25,12 +25,12 @@ namespace DAL
         //    objReader.Close();
         //    return list;
         //}
-
-        public int ModifyStudent(Unit_prices objStudent)
+        //修改单价
+        public int ModifyPrice(Unit_prices objPrice)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append(" update Unit_pricess  set Calories={0},Cooling_capacity={1} where id=1  ");
-            string sql = string.Format(sqlBuilder.ToString(), objStudent.Calories, objStudent.Cooling_capacity);
+            string sql = string.Format(sqlBuilder.ToString(), objPrice.Calories, objPrice.Cooling_capacity);
             try
             {
                 return SQLHelper.Update(sql);
@@ -38,7 +38,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("修改学员信息是数据访问发生异常：" + ex.Message);
+                throw new Exception("修改单价时发生错误：" + ex.Message);
             }
         }
     }

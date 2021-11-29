@@ -64,7 +64,7 @@ namespace ON4
         {
             Calorimeter1Entities4 db = new Calorimeter1Entities4();
             int Quota = Convert.ToInt32(txtQuota.Text.Trim());
-            user_DataService.ModifyStudent2(Quota);
+            user_DataService.UnifyModifyQuota(Quota);
             userbalanceBindingSource.DataSource = db.User_balance.ToList();
         }
 

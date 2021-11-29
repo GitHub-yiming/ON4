@@ -14,6 +14,5 @@ namespace Modles
         //NumberofLayersId, NumberofLayer
         public int NumberofLayersId { get; set; }
         public string NumberofLayer { get; set; }
-        public string ControlAddress { get; set; }
     }
 }

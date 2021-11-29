@@ -35,5 +35,13 @@ namespace DAL
             return list;
         }
 
+        //获取楼层数量
+        public int GetAllnum()
+        {
+            string sql = "select count(*) from NumberofLayers";
+             int result = Convert.ToInt32(SQLHelper.GetSingleResult(sql));
+            return result;
+        }
+
     }
 }

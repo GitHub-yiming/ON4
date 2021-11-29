@@ -61,13 +61,16 @@
       <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="HZH_Controls">
-      <HintPath>D:\Photovoltaic_electronic_communication_control_B\Photovoltaic_electronic_communication_control_B\bin\Debug\HZH_Controls.dll</HintPath>
+    <Reference Include="HZH_Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HZH_Controls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -109,6 +112,9 @@
     <Compile Include="Batchimport.Designer.cs">
       <DependentUpon>Batchimport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calorimeter1DataSet.cs">
+      <DependentUpon>Calorimeter1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Calorimeter1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,10 +133,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Calorimeter1DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Calorimeter1DataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
+    <Compile Include="Calorimeter1DataSet31.Designer.cs">
       <DependentUpon>Calorimeter1DataSet3.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Calorimeter1DataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -144,6 +150,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Calorimeter1DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Calorimeter1DataSet6.cs">
+      <DependentUpon>Calorimeter1DataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Calorimeter1DataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -428,9 +437,9 @@
       <DependentUpon>Calorimeter1DataSet3.xsd</DependentUpon>
     </None>
     <None Include="Calorimeter1DataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Calorimeter1DataSet3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Calorimeter1DataSet31.Designer.cs</LastGenOutput>
     </None>
     <None Include="Calorimeter1DataSet3.xss">
       <DependentUpon>Calorimeter1DataSet3.xsd</DependentUpon>

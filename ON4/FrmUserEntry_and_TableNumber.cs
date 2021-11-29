@@ -30,7 +30,7 @@ namespace ON4
             this.cboLay.DataSource = objNumber.GetAllClass();
             this.cboLay.DisplayMember = "NumberofLayersId";//设置下拉框显示文本
             this.cboLay.ValueMember = "NumberofLayersId";//设置下拉框显示文本对应的Value
-            this.cboLay.SelectedIndex = -1;//默认不选中任何班级
+            this.cboLay.SelectedIndex = -1;//默认不选中任何
             //禁止表格自动生成列
             this.dgvScoreList.AutoGenerateColumns = false;
 
@@ -310,7 +310,7 @@ namespace ON4
                 userdata1BindingSource.ResetBindings(false);
             }
         }
-
+        //失效
         private void uiButton1_Click(object sender, EventArgs e)
         {
             Thread thread = new Thread(t =>
@@ -321,6 +321,7 @@ namespace ON4
             thread.Start();
         }
 
+        //导出EXCEL
         private void uiButton1_Click_1(object sender, EventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();

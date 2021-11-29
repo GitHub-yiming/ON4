@@ -19,7 +19,7 @@ namespace DAL
         /// </summary>
         /// <param name="numberofLayer"></param>
         /// <returns></returns>
-        public List<User_data> GetStudentByClass(string numberofLayer)
+        public List<User_data> GetInfoByFloor(string numberofLayer)
         {
             string sql = "select Table_number,Names,Gender,Room_No,Building,Phone,Billabletime from User_data1";
             sql += " inner join NumberofLayers on User_data1.NumberofLayersId=NumberofLayers.NumberofLayersId";
@@ -63,7 +63,7 @@ namespace DAL
         /// </summary>
         /// <param name="cardNo"></param>
         /// <returns></returns>
-        public bool IsCardNoExisted(string phone)
+        public bool IsPhoneNoExisted(string phone)
         {
             string sql = string.Format("select count(*) from User_data1 where Phone={0}", phone);
             int result = Convert.ToInt32(SQLHelper.GetSingleResult(sql));
@@ -125,64 +125,18 @@ namespace DAL
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dateTime"></param>
-        /// <param name="dateTime1"></param>
-        /// <returns></returns>
-        public List<Total_expenses> QueryScoreList(DateTime dateTime, DateTime dateTime1)
-        {
 
-            StringBuilder sql = new StringBuilder();
-            sql.Append(" if object_id(N'tempdb..#Table4',N'U') is not null drop table #Table4 create table #Table4(id  int identity(1,1)  primary key,unit_price money)");
-            sql.Append(" if object_id(N'tempdb..#Table1',N'U') is not null drop table #Table1 select  distinct Names,Table_number into   #Table1  from User_payment1 ");
-            sql.Append(" alter table #Table1 add id int identity(1,1) if object_id(N'tempdb..#Table2',N'U') is not null drop table #Table2 ");
-            sql.Append(" create table #Table2( id  int identity(1,1)  primary key,Table_number1 nvarchar(30),Names1 varchar(20),Cost2 money) ");
-            sql.Append(" declare @ID int begin  set @ID=1 while @ID<=(	select  COUNT(distinct Names) as count_names from User_payment1) ");
-            sql.Append(" begin declare @num varchar(20),@table nvarchar(30) set @num=(select Names from #Table1 where id=(@ID)) set @table=(select Table_number from #Table1 where id=(@ID)) ");
-            sql.Append("  if object_id(N'tempdb..#Table3',N'U') is not null drop table #Table3 ");
-            sql.Append(" select  distinct Cooling_capacity,Calories into   #Table3  from CalorimeterTable1 where Table_number=@table and ");
-            sql.Append(" year(CreateTime)={0} and month(CreateTime)={1} and day(CreateTime)={2} ");
-            sql.Append(" or  Table_number=@table and year(CreateTime)={3} and month(CreateTime)={4} and day(CreateTime)={5} alter table #Table3 add id int identity(1,1) ");
-            sql.Append(" insert into #Table2(Table_number1, Names1,Cost2 ) (select Table_number=@table,Names1=@num,sum(Cost) as sum_cost from User_payment1 where Names=@num) ");
-            sql.Append(" insert into #Table4(unit_price) (((select(select Cost2 from #Table2 where id=@ID) -((((CONVERT(numeric(8, 2),b.Cooling_capacity)  -  ");
-            sql.Append(" CONVERT(numeric(8, 2),a.Cooling_capacity))*(select Unit_price from Unit_prices where id=1))) ");
-            sql.Append(" +(((CONVERT(numeric(8, 2),b.Calories)  - CONVERT(numeric(8, 2),a.Calories))*(select Unit_price from Unit_prices where id=2)))) ");
-            sql.Append(" from #Table3 a left join #Table3 b on a.id + 1 = b.id))) delete from #Table4 where unit_price IS NULL; dbcc checkident('#table4',reseed,@ID) set @ID=@ID+1 end end  ");
-            sql.Append(" if object_id(N'tempdb..#Table5',N'U') is not null drop table #Table5 ");
-            sql.Append(" create table #Table5(id  int identity(1,1)  primary key,unit_price1 money,Table_number2 nvarchar(30),Names2 varchar(20))  ");
-            sql.Append(" declare @IDD int begin set @IDD =1 while @IDD<=(select COUNT(unit_price) from #Table4) ");
-            sql.Append(" begin declare @table1 varchar(30),@num1 varchar(20) ");
-            sql.Append(" set @num1=(select Names from #Table1 where id=(@IDD)) set @table1=(select Table_number from #Table1 where id=(@IDD)) ");
-            sql.Append(" begin insert into #Table5(unit_price1,Table_number2,Names2) values ((select unit_price from #Table4 where id=@IDD),@table1,@num1) ");
-            sql.Append(" set @IDD=@IDD+1 end end end select *from #Table5 ");
-            string sql1 = string.Format(sql.ToString(), dateTime.ToString("yyyy"),dateTime.ToString("MM"),dateTime.ToString("dd"),dateTime1.ToString("yyyy"),dateTime1.ToString("MM"),dateTime1.ToString("dd"));
-            SqlDataReader objReader = SQLHelper.GetReader(sql1.ToString());
-            List<Total_expenses> stuList = new List<Total_expenses>();
-            while (objReader.Read())
-            {
-                stuList.Add(new Total_expenses()
-                {
-                    Table_number2 = objReader["Table_number2"].ToString(),
-                    Names2 = objReader["Names2"].ToString(),
-                    unit_price1 = Convert.ToDecimal(objReader["unit_price1"])
-                });
-            }
-            objReader.Close();
-            return stuList;
-        }
 
         /// <summary>
         /// 用户缴费
         /// </summary>
-        /// <param name="objStudent"></param>
+        /// <param name="objCost"></param>
         /// <returns></returns>
-        public int ModifyStudent(User_balances objStudent)
+        public int UserCost(User_balances objCost)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append(" update User_balance  set Balance=Balance+{0} where Table_number='{1}' ");
-            string sql = string.Format(sqlBuilder.ToString(), objStudent.Balance,objStudent.Table_number);
+            string sql = string.Format(sqlBuilder.ToString(), objCost.Balance,objCost.Table_number);
             try
             {
                 return SQLHelper.Update(sql);
@@ -197,16 +151,16 @@ namespace DAL
         /// <summary>
         /// 修改用户余额
         /// </summary>
-        /// <param name="objStudent"></param>
+        /// <param name="objBalance"></param>
         /// <returns></returns>
-        public int ModifyStudentEdit(User_balances objStudent)
+        public int ModifyUserBalance(User_balances objBalance)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append(" if(select  Cost from User_payment1)<{0} ");
             sqlBuilder.Append(" update User_balance  set Balance=Balance+({0}-(select  Cost from User_payment1 where Table_number='{1}')) where Table_number='{1}' ");
             sqlBuilder.Append(" else ");
             sqlBuilder.Append(" update User_balance  set Balance=Balance-((select  Cost from User_payment1 where Table_number='{1}')-{0}) where Table_number='{1}' ");
-            string sql = string.Format(sqlBuilder.ToString(), objStudent.Balance, objStudent.Table_number);
+            string sql = string.Format(sqlBuilder.ToString(), objBalance.Balance, objBalance.Table_number);
             try
             {
                 return SQLHelper.Update(sql);
@@ -297,7 +251,7 @@ namespace DAL
         /// </summary>
         /// <param name="objStudent"></param>
         /// <returns></returns>
-        public int ModifyStudent2(int Quota)
+        public int UnifyModifyQuota(int Quota)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("  update User_balance set Quota={0} ");
@@ -391,6 +345,29 @@ namespace DAL
             {
 
                 throw new Exception("根据表号查询楼层数据访问发生异常：" + ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 查找对应表号的冷量最大值
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public double QueryMax(string num)
+        {
+            string sql1 = " if object_id(N'tempdb..#Table6',N'U') is not null drop table #Table10 ";
+            sql1 += " select  Cooling_capacity,CreateTime into   #Table10  from CalorimeterTable1  where Table_number='{0}' ";
+            sql1 += " select Cooling_capacity from #Table10 where CreateTime= (select max(CreateTime) from #Table10) ";
+
+            string sql2 = string.Format(sql1, num);
+            try
+            {
+                return Convert.ToDouble(SQLHelper.GetSingleResult(sql2));
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("检测热量表返回数据与数据库中的数据对比时发生异常！" + ex.Message);
             }
         }
 

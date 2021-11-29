@@ -144,25 +144,34 @@ namespace ON4
         /// <returns></returns>
         public string[] Ordinary_message_analysis_2(byte[] data)
         {
-            string[] vs1 = new string[11];
-            //string vs2 = "";
-            //for (int i = 5; i > 1; i--)
-            //{
-            //    vs2 += data[i].ToString("X2");
-            //}
+            try
+            {
+                string[] vs1 = new string[11];
+                //string vs2 = "";
+                //for (int i = 5; i > 1; i--)
+                //{
+                //    vs2 += data[i].ToString("X2");
+                //}
 
-            vs1[0] = data[5].ToString("X2") + data[4].ToString("X2") + data[3].ToString("X2") + data[2].ToString("X2");
-            vs1[1] = data[17].ToString("X2") + data[16].ToString("X2") + data[15].ToString("X2") + "." + data[14].ToString("X2");
-            vs1[2] = data[22].ToString("X2") + data[21].ToString("X2") + data[20].ToString("X2") + "." + data[19].ToString("X2");
-            vs1[3] = data[27].ToString("X2") + data[26].ToString("X2") + data[25].ToString("X2") + "." + data[24].ToString("X2");
-            vs1[4] = data[32].ToString("X2") + data[31].ToString("X2") + "." + data[30].ToString("X2") + data[29].ToString("X2");
-            vs1[5] = data[37].ToString("X2") + data[36].ToString("X2") + data[35].ToString("X2") + "." + data[34].ToString("X2");
-            vs1[6] = data[41].ToString("X2") + data[40].ToString("X2") + "." + data[39].ToString("X2");
-            vs1[7] = data[44].ToString("X2") + data[43].ToString("X2") + "." + data[42].ToString("X2");
-            vs1[8] = data[47].ToString("X2") + data[46].ToString("X2") + data[45].ToString("X2");
-            vs1[9] = data[54].ToString("X2") + data[53].ToString("X2") + "/" + data[52].ToString("X2") + "/" + data[51].ToString("X2") + "/" + data[50].ToString("X2") + "/" + data[55].ToString("X2") + "/" + data[54].ToString("X2");
-            vs1[10] = data[55].ToString("X2") + data[56].ToString("X2");
-            return vs1;
+                vs1[0] = data[5].ToString("X2") + data[4].ToString("X2") + data[3].ToString("X2") + data[2].ToString("X2");
+                vs1[1] = data[17].ToString("X2") + data[16].ToString("X2") + data[15].ToString("X2") + "." + data[14].ToString("X2");
+                vs1[2] = data[22].ToString("X2") + data[21].ToString("X2") + data[20].ToString("X2") + "." + data[19].ToString("X2");
+                vs1[3] = data[27].ToString("X2") + data[26].ToString("X2") + data[25].ToString("X2") + "." + data[24].ToString("X2");
+                vs1[4] = data[32].ToString("X2") + data[31].ToString("X2") + "." + data[30].ToString("X2") + data[29].ToString("X2");
+                vs1[5] = data[37].ToString("X2") + data[36].ToString("X2") + data[35].ToString("X2") + "." + data[34].ToString("X2");
+                vs1[6] = data[41].ToString("X2") + data[40].ToString("X2") + "." + data[39].ToString("X2");
+                vs1[7] = data[44].ToString("X2") + data[43].ToString("X2") + "." + data[42].ToString("X2");
+                vs1[8] = data[47].ToString("X2") + data[46].ToString("X2") + data[45].ToString("X2");
+                vs1[9] = data[54].ToString("X2") + data[53].ToString("X2") + "/" + data[52].ToString("X2") + "/" + data[51].ToString("X2") + "/" + data[50].ToString("X2") + "/" + data[55].ToString("X2") + "/" + data[54].ToString("X2");
+                vs1[10] = data[55].ToString("X2") + data[56].ToString("X2");
+                return vs1;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
         }
         #endregion
 
@@ -336,6 +345,35 @@ namespace ON4
             }
             return vs1 = Convert.ToByte(vs[0]);
         }
+
+
+        //去除包头(FE)、校验码和包尾(16)
+        public byte XSummation_check_2(byte[] data)
+        {
+            #region 获取数组相同元素的个数
+            int n = 0;
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (data[i].ToString("X2") == "FE")
+                {
+                    n++;
+                }
+            }
+
+            #endregion
+            byte[] vs3 = new byte[data.Length - (n + 2)];
+            byte[] vs4 = new byte[data.Length - n];
+            Array.Copy(data, n, vs4, 0, data.Length - n);//截取需要校验的位
+            Array.Copy(vs4, 0, vs3, 0, vs4.Length - 2);
+            byte[] vs = new byte[1];//累加后
+            byte vs1;//返回校验码
+            for (int i = 0; i < vs3.Length; i++)
+            {
+                vs[0] += vs3[i];
+            }
+            return vs1 = Convert.ToByte(vs[0]);
+        }
+
         #endregion
         #endregion
 
@@ -484,15 +522,15 @@ namespace ON4
         new DataColumn("Table_number",typeof(string)),
         new DataColumn("Cooling_capacity",typeof(string)),
         new DataColumn("Calories",typeof(string)),
-                        new DataColumn("Thermal_power",typeof(string)),
-                                new DataColumn("Instantaneous_flow",typeof(string)),
-                                        new DataColumn("Cumulative_flow",typeof(string)),
-                                                new DataColumn("Water_supply_temperature",typeof(string)),
-                                                        new DataColumn("Return_water_temperature",typeof(string)),
-                                                                new DataColumn("Cumulative_working_time",typeof(string)),
-                                                                        new DataColumn("Instrument_current_time",typeof(string)),
-                                                                        new DataColumn("Instrument_status",typeof(string)),
-                                                                                new DataColumn("Time",typeof(DateTime))
+        new DataColumn("Thermal_power",typeof(string)),
+        new DataColumn("Instantaneous_flow",typeof(string)),
+        new DataColumn("Cumulative_flow",typeof(string)),
+        new DataColumn("Water_supply_temperature",typeof(string)),
+        new DataColumn("Return_water_temperature",typeof(string)),
+        new DataColumn("Cumulative_working_time",typeof(string)),
+        new DataColumn("Instrument_current_time",typeof(string)),
+        new DataColumn("Instrument_status",typeof(string)),
+        new DataColumn("Time",typeof(DateTime))
             });
             return dt;
         }
