@@ -154,19 +154,22 @@ namespace ON4
             {
                 if (hh.ToArray().Length >= 64 && hh.ToArray().Length <= 65)
                 {
+                    //对返回的数据进行校验，分别判断[63]和[62]是因为返回的数据有可能是65或者是64
                     if (data1.XSummation_check_2(hh.ToArray()) == hh[63] || data1.XSummation_check_2(hh.ToArray()) == hh[62])
                     {
                         //判断当前是否在记录中，如果是就把数据写入到数据库中
                         //如果不是在记录中，那么读取到的数据就只在监控界面中显示
                         if (btnRecording.Text == "记录中...")
                         {
-
-                            string[] gg = Ordinary_meter_reading(hh.ToArray());//解析报文数据
+                            //解析报文数据
+                            string[] gg = Ordinary_meter_reading(hh.ToArray());
                             if (gg != null)
                             {
+                                //判断本次金额是否大于上次金额，不满足则数据有误
                                 if (Convert.ToDouble(gg[1]) >= objUser_dataService.QueryMax(gg[0]))
                                 {
-                                    data1.Fddd(gg);//写入数据库
+                                    //写入数据库
+                                    data1.Fddd(gg);
                                 }
                                 else
                                 {

@@ -61,7 +61,10 @@ namespace ON4
             //OpenForm(frmValve_Control);
             frmMonitor.BringToFront();
             timer1.Start();
-            
+            if(new DAL.NumberofLayerService().GetAllNum() == 0)
+            {
+                new DAL.NumberofLayerService().WriteInfo();
+            }
 
         }
 

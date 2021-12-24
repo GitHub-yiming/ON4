@@ -36,11 +36,20 @@ namespace DAL
         }
 
         //获取楼层数量
-        public int GetAllnum()
+        public int GetAllNum()
         {
             string sql = "select count(*) from NumberofLayers";
              int result = Convert.ToInt32(SQLHelper.GetSingleResult(sql));
             return result;
+        }
+
+        public void WriteInfo()
+        {
+            string sql = "  insert into NumberofLayers(NumberofLayersId,NumberofLayer) values ('3','三楼') ";
+            sql += "  insert into NumberofLayers(NumberofLayersId,NumberofLayer) values ('4','四楼') ";
+            sql += "  insert into NumberofLayers(NumberofLayersId,NumberofLayer) values ('5','五楼') ";
+            sql += "  insert into NumberofLayers(NumberofLayersId,NumberofLayer) values ('6','六楼') ";
+            SQLHelper.Update(sql);
         }
 
     }

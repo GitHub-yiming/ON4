@@ -47,19 +47,11 @@
     <Setting Name="记录楼层" Type="System.String" Scope="User">
       <Value Profile="(Default)">全部</Value>
     </Setting>
-    <Setting Name="Calorimeter1ConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
-    </Setting>
     <Setting Name="启用计费" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="启用自动记录" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="从__点到" Type="System.String" Scope="User">
       <Value Profile="(Default)">8</Value>
@@ -71,7 +63,7 @@
       <Value Profile="(Default)">一个</Value>
     </Setting>
     <Setting Name="自动连接串口" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="楼层五串口" Type="System.String" Scope="User">
       <Value Profile="(Default)">COM51</Value>
@@ -115,14 +107,6 @@
     <Setting Name="允许修改额度" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Calorimeter1ConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
-    </Setting>
     <Setting Name="小时触发" Type="System.String" Scope="User">
       <Value Profile="(Default)">20</Value>
     </Setting>
@@ -143,6 +127,22 @@
     </Setting>
     <Setting Name="六层阀门串口2" Type="System.String" Scope="User">
       <Value Profile="(Default)">COM60</Value>
+    </Setting>
+    <Setting Name="Calorimeter1ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=.;Initial Catalog=Calorimeter1;User ID=sa;Password=123&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
+    </Setting>
+    <Setting Name="Calorimeter1ConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=.;Initial Catalog=Calorimeter1;User ID=sa;Password=123&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
     </Setting>
   </Settings>
 </SettingsFile>

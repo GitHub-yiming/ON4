@@ -75,7 +75,7 @@
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>C:\Program Files\Microsoft Office\root\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <HintPath>C:\Program Files\Microsoft Office\Updates\Download\PackageFiles\5F30B410-E3A1-4A3B-94C6-45826468AA7D\root\Office16\ADDINS\PowerPivot Excel Add-in\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=1.2.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -395,6 +395,8 @@
     <EmbeddedResource Include="User_payment.resx">
       <DependentUpon>User_payment.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.configFile\sqlexpress\App.config" />
+    <None Include="App.configFile\。\App.config" />
     <None Include="app.manifest" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -488,6 +490,7 @@
     <None Include="Calorimeter1DataSet7.xss">
       <DependentUpon>Calorimeter1DataSet7.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram4.cd" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -605,5 +608,6 @@
     <Content Include="SQL\Cost_Schedule.txt" />
     <Content Include="SQL\Sql_view.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
