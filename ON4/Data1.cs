@@ -200,8 +200,8 @@ namespace ON4
 
             double hotaddcol = cooldouble + hotduble;
 
-            vs1[1] = String.Format("{0:F}", hotaddcol);
-            vs1[2] = "000000.00";
+            vs1[1] = String.Format("{0:F}", hotaddcol);//冷量
+            vs1[2] = "000000.00";//热量
             vs1[3] = data[27].ToString("X2") + data[26].ToString("X2") + data[25].ToString("X2") + "." + data[24].ToString("X2");
             vs1[4] = data[32].ToString("X2") + data[31].ToString("X2") + "." + data[30].ToString("X2") + data[29].ToString("X2");
             vs1[5] = data[37].ToString("X2") + data[36].ToString("X2") + data[35].ToString("X2") + "." + data[34].ToString("X2");
