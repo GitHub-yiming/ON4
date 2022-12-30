@@ -173,6 +173,47 @@ namespace ON4
             }
 
         }
+
+
+        /// <summary>
+        /// 普通报文解析-3(使用中)
+        /// 热量合并到冷量显示，热量为0
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public string[] Ordinary_message_analysis_3(byte[] data)
+        {
+            string[] vs1 = new string[11];
+
+            vs1[0] = data[5].ToString("X2") + data[4].ToString("X2") + data[3].ToString("X2") + data[2].ToString("X2");
+
+            //冷量
+            //vs1[1] = data[17].ToString("X2") + data[16].ToString("X2") + data[15].ToString("X2") + "." + data[14].ToString("X2");
+
+            string cool = data[17].ToString("X2") + data[16].ToString("X2") + data[15].ToString("X2") + "." + data[14].ToString("X2");
+            double cooldouble = Convert.ToDouble(cool);
+
+            //热量
+            //vs1[2] = data[22].ToString("X2") + data[21].ToString("X2") + data[20].ToString("X2") + "." + data[19].ToString("X2"); 
+            string hot = data[22].ToString("X2") + data[21].ToString("X2") + data[20].ToString("X2") + "." + data[19].ToString("X2");
+            double hotduble = Convert.ToDouble(hot);
+
+            double hotaddcol = cooldouble + hotduble;
+
+            vs1[1] = String.Format("{0:F}", hotaddcol);
+            vs1[2] = "000000.00";
+            vs1[3] = data[27].ToString("X2") + data[26].ToString("X2") + data[25].ToString("X2") + "." + data[24].ToString("X2");
+            vs1[4] = data[32].ToString("X2") + data[31].ToString("X2") + "." + data[30].ToString("X2") + data[29].ToString("X2");
+            vs1[5] = data[37].ToString("X2") + data[36].ToString("X2") + data[35].ToString("X2") + "." + data[34].ToString("X2");
+            vs1[6] = data[41].ToString("X2") + data[40].ToString("X2") + "." + data[39].ToString("X2");
+            vs1[7] = data[44].ToString("X2") + data[43].ToString("X2") + "." + data[42].ToString("X2");
+            vs1[8] = data[47].ToString("X2") + data[46].ToString("X2") + data[45].ToString("X2");
+            vs1[9] = data[54].ToString("X2") + data[53].ToString("X2") + "/" + data[52].ToString("X2") + "/" + data[51].ToString("X2") + "/" + data[50].ToString("X2") + "/" + data[55].ToString("X2") + "/" + data[54].ToString("X2");
+            vs1[10] = data[55].ToString("X2") + data[56].ToString("X2");
+            return vs1;
+        }
+
+
         #endregion
 
         #region 解析表号

@@ -487,7 +487,8 @@ namespace ON4
             //uiDataGridView1.Rows[0].Cells[0].Value = vs[0].ToString("X2");
             for (int i = 0; i < data1.Ordinary_message_analysis_2(vsS).Length; i++)
             {
-                uiDataGridView1.Rows[0].Cells[i].Value = data1.Ordinary_message_analysis_2(vsS)[i];
+                //监控界面显示
+                uiDataGridView1.Rows[0].Cells[i].Value = data1.Ordinary_message_analysis_3(vsS)[i];
             }
 
             return data1.Ordinary_message_analysis_2(vsS);
