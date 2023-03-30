@@ -89,9 +89,9 @@ namespace DAL
         /// </summary>
         /// <param name="tablenumber"></param>
         /// <returns></returns>
-        public bool NotUserRepeat(string tablenumber)
+        public bool NotUserRepeat(string tablenumber,string names)
         {
-            string sql = string.Format("select count(*) from User_data1 where Table_number='{0}' ", tablenumber);
+            string sql = string.Format("select count(*) from User_data1 where Table_number='{0}' and Names='{1}' ", tablenumber,names);
             int result = Convert.ToInt32(SQLHelper.GetSingleResult(sql));
             if (result == 1) return true;
             else return false ;
