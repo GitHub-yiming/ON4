@@ -487,6 +487,7 @@ namespace ON4
 
             sqlConn.Open();
 
+
             String sqlStr = @"  select distinct NumberofLayersId from User_data1";
 
             SqlCommand sqlComm = new SqlCommand(sqlStr, sqlConn);
