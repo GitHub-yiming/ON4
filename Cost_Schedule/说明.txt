@@ -1,3 +1,5 @@
 1Cost_Schedule.txt  热量和冷量数据不合并
 
 2Cost_Schedule.txt   热量和冷量数据合并
+
+3Cost_Schedule.txt   热量和冷量数据合并，且增大了一些数据类型的范围
