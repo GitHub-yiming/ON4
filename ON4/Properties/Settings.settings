@@ -144,5 +144,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=.;Initial Catalog=Calorimeter1;User ID=sa;Password=123</Value>
     </Setting>
+    <Setting Name="读取延时时间" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">800</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

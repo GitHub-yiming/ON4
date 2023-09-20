@@ -30,12 +30,12 @@ namespace ON4
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.uBtnStop = new Sunny.UI.UIButton();
@@ -268,7 +268,7 @@ namespace ON4
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -293,8 +293,9 @@ namespace ON4
             this.splitContainer1.Panel2.Controls.Add(this.dgvScoreList1);
             this.splitContainer1.Panel2.Controls.Add(this.uiComboBox2);
             this.splitContainer1.Panel2.Controls.Add(this.uiComboBox8);
-            this.splitContainer1.Size = new System.Drawing.Size(1924, 1055);
-            this.splitContainer1.SplitterDistance = 97;
+            this.splitContainer1.Size = new System.Drawing.Size(1443, 844);
+            this.splitContainer1.SplitterDistance = 77;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // uiGroupBox1
@@ -316,11 +317,11 @@ namespace ON4
             this.uiGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(1924, 97);
+            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
+            this.uiGroupBox1.Size = new System.Drawing.Size(1443, 77);
             this.uiGroupBox1.TabIndex = 0;
             this.uiGroupBox1.Text = "基本设置";
             // 
@@ -356,7 +357,7 @@ namespace ON4
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(1719, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 27);
+            this.label2.Size = new System.Drawing.Size(106, 21);
             this.label2.TabIndex = 17;
             this.label2.Text = "当前未在记录";
             this.label2.Visible = false;
@@ -367,7 +368,7 @@ namespace ON4
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(1293, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 27);
+            this.label1.Size = new System.Drawing.Size(138, 21);
             this.label1.TabIndex = 17;
             this.label1.Text = "下一次记录是在：";
             // 
@@ -408,7 +409,7 @@ namespace ON4
             this.uiComboBox1.Name = "uiComboBox1";
             this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox1.Radius = 20;
-            this.uiComboBox1.Size = new System.Drawing.Size(65, 34);
+            this.uiComboBox1.Size = new System.Drawing.Size(65, 29);
             this.uiComboBox1.TabIndex = 13;
             this.uiComboBox1.Text = global::ON4.Properties.Settings.Default.小时触发;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,7 +445,7 @@ namespace ON4
             this.uiComboBox9.Name = "uiComboBox9";
             this.uiComboBox9.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox9.Radius = 20;
-            this.uiComboBox9.Size = new System.Drawing.Size(106, 34);
+            this.uiComboBox9.Size = new System.Drawing.Size(106, 29);
             this.uiComboBox9.TabIndex = 4;
             this.uiComboBox9.Text = global::ON4.Properties.Settings.Default.记录楼层;
             this.uiComboBox9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -465,7 +466,7 @@ namespace ON4
             this.uiComboBox6.Name = "uiComboBox6";
             this.uiComboBox6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox6.Radius = 20;
-            this.uiComboBox6.Size = new System.Drawing.Size(65, 34);
+            this.uiComboBox6.Size = new System.Drawing.Size(65, 29);
             this.uiComboBox6.TabIndex = 14;
             this.uiComboBox6.Text = global::ON4.Properties.Settings.Default.时间间隔;
             this.uiComboBox6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -492,7 +493,7 @@ namespace ON4
             this.cboFloor.Name = "cboFloor";
             this.cboFloor.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboFloor.Radius = 20;
-            this.cboFloor.Size = new System.Drawing.Size(106, 34);
+            this.cboFloor.Size = new System.Drawing.Size(106, 29);
             this.cboFloor.TabIndex = 4;
             this.cboFloor.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -544,16 +545,14 @@ namespace ON4
             // 
             this.uiGroupBox12.Controls.Add(this.uiGroupBox16);
             this.uiGroupBox12.Controls.Add(this.uiGroupBox17);
-            this.uiGroupBox12.FillColor = System.Drawing.Color.LightBlue;
             this.uiGroupBox12.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox12.Location = new System.Drawing.Point(177, 528);
-            this.uiGroupBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox12.Location = new System.Drawing.Point(133, 422);
+            this.uiGroupBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox12.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox12.Name = "uiGroupBox12";
-            this.uiGroupBox12.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox12.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox12.Radius = 20;
-            this.uiGroupBox12.Size = new System.Drawing.Size(632, 364);
-            this.uiGroupBox12.Style = Sunny.UI.UIStyle.Custom;
+            this.uiGroupBox12.Size = new System.Drawing.Size(474, 291);
             this.uiGroupBox12.TabIndex = 0;
             this.uiGroupBox12.Text = "五层阀门";
             this.uiGroupBox12.Visible = false;
@@ -572,22 +571,20 @@ namespace ON4
             this.uiGroupBox16.Controls.Add(this.uiLabel36);
             this.uiGroupBox16.Controls.Add(this.btnPotConn7);
             this.uiGroupBox16.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox16.Location = new System.Drawing.Point(8, 28);
+            this.uiGroupBox16.Location = new System.Drawing.Point(15, 31);
             this.uiGroupBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox16.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox16.Name = "uiGroupBox16";
             this.uiGroupBox16.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox16.Radius = 20;
             this.uiGroupBox16.Size = new System.Drawing.Size(283, 321);
-            this.uiGroupBox16.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox16.TabIndex = 16;
             this.uiGroupBox16.Text = null;
             // 
             // cboPot7
             // 
-            this.cboPot7.BackColor = System.Drawing.Color.LightBlue;
+            this.cboPot7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboPot7.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "五层阀门串口", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboPot7.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cboPot7.FillColor = System.Drawing.Color.White;
             this.cboPot7.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboPot7.Location = new System.Drawing.Point(111, 77);
@@ -596,8 +593,7 @@ namespace ON4
             this.cboPot7.Name = "cboPot7";
             this.cboPot7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot7.Radius = 20;
-            this.cboPot7.Size = new System.Drawing.Size(117, 34);
-            this.cboPot7.Style = Sunny.UI.UIStyle.Custom;
+            this.cboPot7.Size = new System.Drawing.Size(117, 29);
             this.cboPot7.TabIndex = 15;
             this.cboPot7.Text = global::ON4.Properties.Settings.Default.五层阀门串口;
             this.cboPot7.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -605,7 +601,7 @@ namespace ON4
             // 
             // uiComboBox10
             // 
-            this.uiComboBox10.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox10.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox10.FillColor = System.Drawing.Color.White;
             this.uiComboBox10.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -628,15 +624,14 @@ namespace ON4
             this.uiComboBox10.Name = "uiComboBox10";
             this.uiComboBox10.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox10.Radius = 20;
-            this.uiComboBox10.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox10.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox10.TabIndex = 14;
             this.uiComboBox10.Text = "9600";
             this.uiComboBox10.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox11
             // 
-            this.uiComboBox11.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox11.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox11.FillColor = System.Drawing.Color.White;
             this.uiComboBox11.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -652,15 +647,14 @@ namespace ON4
             this.uiComboBox11.Name = "uiComboBox11";
             this.uiComboBox11.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox11.Radius = 20;
-            this.uiComboBox11.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox11.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox11.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox11.TabIndex = 13;
             this.uiComboBox11.Text = "Even";
             this.uiComboBox11.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox12
             // 
-            this.uiComboBox12.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox12.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox12.FillColor = System.Drawing.Color.White;
             this.uiComboBox12.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -673,15 +667,14 @@ namespace ON4
             this.uiComboBox12.Name = "uiComboBox12";
             this.uiComboBox12.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox12.Radius = 20;
-            this.uiComboBox12.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox12.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox12.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox12.TabIndex = 12;
             this.uiComboBox12.Text = "8";
             this.uiComboBox12.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox13
             // 
-            this.uiComboBox13.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox13.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox13.FillColor = System.Drawing.Color.White;
             this.uiComboBox13.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -695,75 +688,69 @@ namespace ON4
             this.uiComboBox13.Name = "uiComboBox13";
             this.uiComboBox13.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox13.Radius = 20;
-            this.uiComboBox13.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox13.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox13.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox13.TabIndex = 11;
             this.uiComboBox13.Text = "One";
             this.uiComboBox13.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel40
             // 
-            this.uiLabel40.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel40.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel40.Location = new System.Drawing.Point(32, 80);
             this.uiLabel40.Name = "uiLabel40";
             this.uiLabel40.Size = new System.Drawing.Size(73, 23);
-            this.uiLabel40.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel40.TabIndex = 8;
             this.uiLabel40.Text = "串口：";
             this.uiLabel40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel39
             // 
-            this.uiLabel39.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel39.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel39.Location = new System.Drawing.Point(32, 127);
             this.uiLabel39.Name = "uiLabel39";
             this.uiLabel39.Size = new System.Drawing.Size(95, 23);
-            this.uiLabel39.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel39.TabIndex = 7;
             this.uiLabel39.Text = "波特率：";
             this.uiLabel39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel38
             // 
-            this.uiLabel38.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel38.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel38.Location = new System.Drawing.Point(32, 174);
             this.uiLabel38.Name = "uiLabel38";
             this.uiLabel38.Size = new System.Drawing.Size(96, 23);
-            this.uiLabel38.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel38.TabIndex = 6;
             this.uiLabel38.Text = "校验位：";
             this.uiLabel38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel37
             // 
-            this.uiLabel37.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel37.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel37.Location = new System.Drawing.Point(32, 221);
             this.uiLabel37.Name = "uiLabel37";
             this.uiLabel37.Size = new System.Drawing.Size(106, 23);
-            this.uiLabel37.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel37.TabIndex = 5;
             this.uiLabel37.Text = "数据位：";
             this.uiLabel37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel36
             // 
-            this.uiLabel36.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel36.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel36.Location = new System.Drawing.Point(32, 268);
             this.uiLabel36.Name = "uiLabel36";
             this.uiLabel36.Size = new System.Drawing.Size(115, 23);
-            this.uiLabel36.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel36.TabIndex = 4;
             this.uiLabel36.Text = "停止位：";
             this.uiLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPotConn7
             // 
-            this.btnPotConn7.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn7.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn7.Location = new System.Drawing.Point(111, 28);
@@ -771,7 +758,6 @@ namespace ON4
             this.btnPotConn7.Name = "btnPotConn7";
             this.btnPotConn7.Radius = 20;
             this.btnPotConn7.Size = new System.Drawing.Size(117, 34);
-            this.btnPotConn7.Style = Sunny.UI.UIStyle.Custom;
             this.btnPotConn7.TabIndex = 10;
             this.btnPotConn7.Text = "连接";
             this.btnPotConn7.Click += new System.EventHandler(this.btnPotConn7_Click);
@@ -790,20 +776,19 @@ namespace ON4
             this.uiGroupBox17.Controls.Add(this.uiLabel61);
             this.uiGroupBox17.Controls.Add(this.btnPotConn11);
             this.uiGroupBox17.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox17.Location = new System.Drawing.Point(330, 28);
+            this.uiGroupBox17.Location = new System.Drawing.Point(321, 31);
             this.uiGroupBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox17.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox17.Name = "uiGroupBox17";
             this.uiGroupBox17.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox17.Radius = 20;
             this.uiGroupBox17.Size = new System.Drawing.Size(283, 321);
-            this.uiGroupBox17.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox17.TabIndex = 11;
             this.uiGroupBox17.Text = null;
             // 
             // uiComboBox29
             // 
-            this.uiComboBox29.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox29.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "五层阀门串口2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.uiComboBox29.FillColor = System.Drawing.Color.White;
             this.uiComboBox29.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -813,8 +798,7 @@ namespace ON4
             this.uiComboBox29.Name = "uiComboBox29";
             this.uiComboBox29.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox29.Radius = 20;
-            this.uiComboBox29.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox29.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox29.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox29.TabIndex = 15;
             this.uiComboBox29.Text = global::ON4.Properties.Settings.Default.五层阀门串口2;
             this.uiComboBox29.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -822,7 +806,7 @@ namespace ON4
             // 
             // uiComboBox30
             // 
-            this.uiComboBox30.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox30.FillColor = System.Drawing.Color.White;
             this.uiComboBox30.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox30.Items.AddRange(new object[] {
@@ -844,15 +828,14 @@ namespace ON4
             this.uiComboBox30.Name = "uiComboBox30";
             this.uiComboBox30.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox30.Radius = 20;
-            this.uiComboBox30.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox30.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox30.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox30.TabIndex = 14;
             this.uiComboBox30.Text = "9600";
             this.uiComboBox30.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox31
             // 
-            this.uiComboBox31.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox31.FillColor = System.Drawing.Color.White;
             this.uiComboBox31.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox31.Items.AddRange(new object[] {
@@ -867,15 +850,14 @@ namespace ON4
             this.uiComboBox31.Name = "uiComboBox31";
             this.uiComboBox31.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox31.Radius = 20;
-            this.uiComboBox31.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox31.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox31.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox31.TabIndex = 13;
             this.uiComboBox31.Text = "Even";
             this.uiComboBox31.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox32
             // 
-            this.uiComboBox32.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox32.FillColor = System.Drawing.Color.White;
             this.uiComboBox32.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox32.Items.AddRange(new object[] {
@@ -887,15 +869,14 @@ namespace ON4
             this.uiComboBox32.Name = "uiComboBox32";
             this.uiComboBox32.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox32.Radius = 20;
-            this.uiComboBox32.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox32.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox32.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox32.TabIndex = 12;
             this.uiComboBox32.Text = "8";
             this.uiComboBox32.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox33
             // 
-            this.uiComboBox33.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox33.FillColor = System.Drawing.Color.White;
             this.uiComboBox33.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox33.Items.AddRange(new object[] {
@@ -908,75 +889,69 @@ namespace ON4
             this.uiComboBox33.Name = "uiComboBox33";
             this.uiComboBox33.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox33.Radius = 20;
-            this.uiComboBox33.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox33.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox33.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox33.TabIndex = 11;
             this.uiComboBox33.Text = "One";
             this.uiComboBox33.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel57
             // 
-            this.uiLabel57.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel57.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel57.Location = new System.Drawing.Point(32, 80);
             this.uiLabel57.Name = "uiLabel57";
             this.uiLabel57.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel57.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel57.TabIndex = 8;
             this.uiLabel57.Text = "串口：";
             this.uiLabel57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel58
             // 
-            this.uiLabel58.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel58.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel58.Location = new System.Drawing.Point(32, 127);
             this.uiLabel58.Name = "uiLabel58";
             this.uiLabel58.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel58.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel58.TabIndex = 7;
             this.uiLabel58.Text = "波特率：";
             this.uiLabel58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel59
             // 
-            this.uiLabel59.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel59.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel59.Location = new System.Drawing.Point(32, 174);
             this.uiLabel59.Name = "uiLabel59";
             this.uiLabel59.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel59.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel59.TabIndex = 6;
             this.uiLabel59.Text = "校验位：";
             this.uiLabel59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel60
             // 
-            this.uiLabel60.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel60.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel60.Location = new System.Drawing.Point(32, 221);
             this.uiLabel60.Name = "uiLabel60";
             this.uiLabel60.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel60.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel60.TabIndex = 5;
             this.uiLabel60.Text = "数据位：";
             this.uiLabel60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel61
             // 
-            this.uiLabel61.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel61.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel61.Location = new System.Drawing.Point(32, 268);
             this.uiLabel61.Name = "uiLabel61";
             this.uiLabel61.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel61.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel61.TabIndex = 4;
             this.uiLabel61.Text = "停止位：";
             this.uiLabel61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPotConn11
             // 
-            this.btnPotConn11.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn11.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn11.Location = new System.Drawing.Point(111, 28);
@@ -984,7 +959,6 @@ namespace ON4
             this.btnPotConn11.Name = "btnPotConn11";
             this.btnPotConn11.Radius = 20;
             this.btnPotConn11.Size = new System.Drawing.Size(117, 34);
-            this.btnPotConn11.Style = Sunny.UI.UIStyle.Custom;
             this.btnPotConn11.TabIndex = 10;
             this.btnPotConn11.Text = "连接";
             this.btnPotConn11.Click += new System.EventHandler(this.btnPotConn11_Click);
@@ -1003,13 +977,13 @@ namespace ON4
             this.uiGroupBox8.Controls.Add(this.uiLabel5);
             this.uiGroupBox8.Controls.Add(this.uiLabel6);
             this.uiGroupBox8.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox8.Location = new System.Drawing.Point(177, 276);
-            this.uiGroupBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox8.Location = new System.Drawing.Point(133, 221);
+            this.uiGroupBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox8.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox8.Name = "uiGroupBox8";
-            this.uiGroupBox8.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox8.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox8.Radius = 20;
-            this.uiGroupBox8.Size = new System.Drawing.Size(1519, 112);
+            this.uiGroupBox8.Size = new System.Drawing.Size(1139, 90);
             this.uiGroupBox8.TabIndex = 0;
             this.uiGroupBox8.Text = "楼层五";
             this.uiGroupBox8.Visible = false;
@@ -1017,7 +991,6 @@ namespace ON4
             // cboPot3
             // 
             this.cboPot3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "楼层五串口", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboPot3.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cboPot3.FillColor = System.Drawing.Color.White;
             this.cboPot3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboPot3.Location = new System.Drawing.Point(63, 42);
@@ -1026,7 +999,7 @@ namespace ON4
             this.cboPot3.Name = "cboPot3";
             this.cboPot3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot3.Radius = 20;
-            this.cboPot3.Size = new System.Drawing.Size(117, 34);
+            this.cboPot3.Size = new System.Drawing.Size(117, 29);
             this.cboPot3.TabIndex = 15;
             this.cboPot3.Text = global::ON4.Properties.Settings.Default.楼层五串口;
             this.cboPot3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1056,7 +1029,7 @@ namespace ON4
             this.cboBri3.Name = "cboBri3";
             this.cboBri3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboBri3.Radius = 20;
-            this.cboBri3.Size = new System.Drawing.Size(106, 34);
+            this.cboBri3.Size = new System.Drawing.Size(106, 29);
             this.cboBri3.TabIndex = 14;
             this.cboBri3.Text = "2400";
             this.cboBri3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1078,7 +1051,7 @@ namespace ON4
             this.cboChe3.Name = "cboChe3";
             this.cboChe3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboChe3.Radius = 20;
-            this.cboChe3.Size = new System.Drawing.Size(106, 34);
+            this.cboChe3.Size = new System.Drawing.Size(106, 29);
             this.cboChe3.TabIndex = 13;
             this.cboChe3.Text = "Even";
             this.cboChe3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1097,7 +1070,7 @@ namespace ON4
             this.cboData3.Name = "cboData3";
             this.cboData3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboData3.Radius = 20;
-            this.cboData3.Size = new System.Drawing.Size(106, 34);
+            this.cboData3.Size = new System.Drawing.Size(106, 29);
             this.cboData3.TabIndex = 12;
             this.cboData3.Text = "8";
             this.cboData3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1117,7 +1090,7 @@ namespace ON4
             this.cboStop3.Name = "cboStop3";
             this.cboStop3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboStop3.Radius = 20;
-            this.cboStop3.Size = new System.Drawing.Size(106, 34);
+            this.cboStop3.Size = new System.Drawing.Size(106, 29);
             this.cboStop3.TabIndex = 11;
             this.cboStop3.Text = "One";
             this.cboStop3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1199,13 +1172,13 @@ namespace ON4
             this.uiGroupBox9.Controls.Add(this.uiLabel28);
             this.uiGroupBox9.Controls.Add(this.uiLabel29);
             this.uiGroupBox9.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox9.Location = new System.Drawing.Point(177, 395);
-            this.uiGroupBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox9.Location = new System.Drawing.Point(133, 316);
+            this.uiGroupBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox9.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox9.Name = "uiGroupBox9";
-            this.uiGroupBox9.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox9.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox9.Radius = 20;
-            this.uiGroupBox9.Size = new System.Drawing.Size(1519, 112);
+            this.uiGroupBox9.Size = new System.Drawing.Size(1139, 90);
             this.uiGroupBox9.TabIndex = 0;
             this.uiGroupBox9.Text = "楼层六";
             this.uiGroupBox9.Visible = false;
@@ -1213,7 +1186,6 @@ namespace ON4
             // cboPot4
             // 
             this.cboPot4.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "楼层六串口", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboPot4.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cboPot4.FillColor = System.Drawing.Color.White;
             this.cboPot4.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboPot4.Location = new System.Drawing.Point(63, 40);
@@ -1222,7 +1194,7 @@ namespace ON4
             this.cboPot4.Name = "cboPot4";
             this.cboPot4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot4.Radius = 20;
-            this.cboPot4.Size = new System.Drawing.Size(117, 34);
+            this.cboPot4.Size = new System.Drawing.Size(117, 29);
             this.cboPot4.TabIndex = 15;
             this.cboPot4.Text = global::ON4.Properties.Settings.Default.楼层六串口;
             this.cboPot4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1252,7 +1224,7 @@ namespace ON4
             this.cboBri4.Name = "cboBri4";
             this.cboBri4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboBri4.Radius = 20;
-            this.cboBri4.Size = new System.Drawing.Size(106, 34);
+            this.cboBri4.Size = new System.Drawing.Size(106, 29);
             this.cboBri4.TabIndex = 14;
             this.cboBri4.Text = "2400";
             this.cboBri4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1274,7 +1246,7 @@ namespace ON4
             this.cboChe4.Name = "cboChe4";
             this.cboChe4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboChe4.Radius = 20;
-            this.cboChe4.Size = new System.Drawing.Size(106, 34);
+            this.cboChe4.Size = new System.Drawing.Size(106, 29);
             this.cboChe4.TabIndex = 13;
             this.cboChe4.Text = "Even";
             this.cboChe4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1293,7 +1265,7 @@ namespace ON4
             this.cboData4.Name = "cboData4";
             this.cboData4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboData4.Radius = 20;
-            this.cboData4.Size = new System.Drawing.Size(106, 34);
+            this.cboData4.Size = new System.Drawing.Size(106, 29);
             this.cboData4.TabIndex = 12;
             this.cboData4.Text = "8";
             this.cboData4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1313,7 +1285,7 @@ namespace ON4
             this.cboStop4.Name = "cboStop4";
             this.cboStop4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboStop4.Radius = 20;
-            this.cboStop4.Size = new System.Drawing.Size(106, 34);
+            this.cboStop4.Size = new System.Drawing.Size(106, 29);
             this.cboStop4.TabIndex = 11;
             this.cboStop4.Text = "One";
             this.cboStop4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1385,16 +1357,14 @@ namespace ON4
             // 
             this.uiGroupBox13.Controls.Add(this.uiGroupBox5);
             this.uiGroupBox13.Controls.Add(this.uiGroupBox18);
-            this.uiGroupBox13.FillColor = System.Drawing.Color.LightBlue;
             this.uiGroupBox13.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox13.Location = new System.Drawing.Point(835, 528);
-            this.uiGroupBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox13.Location = new System.Drawing.Point(626, 422);
+            this.uiGroupBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox13.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox13.Name = "uiGroupBox13";
-            this.uiGroupBox13.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox13.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox13.Radius = 20;
-            this.uiGroupBox13.Size = new System.Drawing.Size(632, 364);
-            this.uiGroupBox13.Style = Sunny.UI.UIStyle.Custom;
+            this.uiGroupBox13.Size = new System.Drawing.Size(474, 291);
             this.uiGroupBox13.TabIndex = 0;
             this.uiGroupBox13.Text = "六层阀门";
             this.uiGroupBox13.Visible = false;
@@ -1413,22 +1383,20 @@ namespace ON4
             this.uiGroupBox5.Controls.Add(this.uiLabel44);
             this.uiGroupBox5.Controls.Add(this.uiLabel43);
             this.uiGroupBox5.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox5.Location = new System.Drawing.Point(8, 28);
+            this.uiGroupBox5.Location = new System.Drawing.Point(19, 31);
             this.uiGroupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox5.Name = "uiGroupBox5";
             this.uiGroupBox5.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox5.Radius = 20;
             this.uiGroupBox5.Size = new System.Drawing.Size(283, 321);
-            this.uiGroupBox5.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox5.TabIndex = 16;
             this.uiGroupBox5.Text = null;
             // 
             // cboPot8
             // 
-            this.cboPot8.BackColor = System.Drawing.Color.LightBlue;
+            this.cboPot8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboPot8.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "六层阀门串口", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboPot8.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cboPot8.FillColor = System.Drawing.Color.White;
             this.cboPot8.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboPot8.Location = new System.Drawing.Point(111, 77);
@@ -1437,8 +1405,7 @@ namespace ON4
             this.cboPot8.Name = "cboPot8";
             this.cboPot8.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot8.Radius = 20;
-            this.cboPot8.Size = new System.Drawing.Size(117, 34);
-            this.cboPot8.Style = Sunny.UI.UIStyle.Custom;
+            this.cboPot8.Size = new System.Drawing.Size(117, 29);
             this.cboPot8.TabIndex = 15;
             this.cboPot8.Text = global::ON4.Properties.Settings.Default.六层阀门串口;
             this.cboPot8.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1446,7 +1413,7 @@ namespace ON4
             // 
             // uiComboBox15
             // 
-            this.uiComboBox15.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox15.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox15.FillColor = System.Drawing.Color.White;
             this.uiComboBox15.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1469,15 +1436,14 @@ namespace ON4
             this.uiComboBox15.Name = "uiComboBox15";
             this.uiComboBox15.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox15.Radius = 20;
-            this.uiComboBox15.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox15.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox15.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox15.TabIndex = 14;
             this.uiComboBox15.Text = "9600";
             this.uiComboBox15.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox16
             // 
-            this.uiComboBox16.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox16.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox16.FillColor = System.Drawing.Color.White;
             this.uiComboBox16.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1493,15 +1459,14 @@ namespace ON4
             this.uiComboBox16.Name = "uiComboBox16";
             this.uiComboBox16.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox16.Radius = 20;
-            this.uiComboBox16.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox16.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox16.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox16.TabIndex = 13;
             this.uiComboBox16.Text = "Even";
             this.uiComboBox16.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox17
             // 
-            this.uiComboBox17.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox17.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox17.FillColor = System.Drawing.Color.White;
             this.uiComboBox17.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1514,15 +1479,14 @@ namespace ON4
             this.uiComboBox17.Name = "uiComboBox17";
             this.uiComboBox17.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox17.Radius = 20;
-            this.uiComboBox17.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox17.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox17.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox17.TabIndex = 12;
             this.uiComboBox17.Text = "8";
             this.uiComboBox17.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox18
             // 
-            this.uiComboBox18.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox18.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboBox18.FillColor = System.Drawing.Color.White;
             this.uiComboBox18.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1536,27 +1500,25 @@ namespace ON4
             this.uiComboBox18.Name = "uiComboBox18";
             this.uiComboBox18.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox18.Radius = 20;
-            this.uiComboBox18.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox18.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox18.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox18.TabIndex = 11;
             this.uiComboBox18.Text = "One";
             this.uiComboBox18.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel41
             // 
-            this.uiLabel41.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel41.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel41.Location = new System.Drawing.Point(32, 268);
             this.uiLabel41.Name = "uiLabel41";
             this.uiLabel41.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel41.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel41.TabIndex = 4;
             this.uiLabel41.Text = "停止位：";
             this.uiLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPotConn8
             // 
-            this.btnPotConn8.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn8.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn8.Location = new System.Drawing.Point(113, 28);
@@ -1564,55 +1526,50 @@ namespace ON4
             this.btnPotConn8.Name = "btnPotConn8";
             this.btnPotConn8.Radius = 20;
             this.btnPotConn8.Size = new System.Drawing.Size(117, 34);
-            this.btnPotConn8.Style = Sunny.UI.UIStyle.Custom;
             this.btnPotConn8.TabIndex = 10;
             this.btnPotConn8.Text = "连接";
             this.btnPotConn8.Click += new System.EventHandler(this.btnPotConn8_Click);
             // 
             // uiLabel45
             // 
-            this.uiLabel45.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel45.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel45.Location = new System.Drawing.Point(32, 80);
             this.uiLabel45.Name = "uiLabel45";
             this.uiLabel45.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel45.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel45.TabIndex = 8;
             this.uiLabel45.Text = "串口：";
             this.uiLabel45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel42
             // 
-            this.uiLabel42.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel42.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel42.Location = new System.Drawing.Point(32, 221);
             this.uiLabel42.Name = "uiLabel42";
             this.uiLabel42.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel42.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel42.TabIndex = 5;
             this.uiLabel42.Text = "数据位：";
             this.uiLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel44
             // 
-            this.uiLabel44.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel44.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel44.Location = new System.Drawing.Point(32, 127);
             this.uiLabel44.Name = "uiLabel44";
             this.uiLabel44.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel44.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel44.TabIndex = 7;
             this.uiLabel44.Text = "波特率：";
             this.uiLabel44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel43
             // 
-            this.uiLabel43.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel43.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel43.Location = new System.Drawing.Point(32, 174);
             this.uiLabel43.Name = "uiLabel43";
             this.uiLabel43.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel43.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel43.TabIndex = 6;
             this.uiLabel43.Text = "校验位：";
             this.uiLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1631,20 +1588,19 @@ namespace ON4
             this.uiGroupBox18.Controls.Add(this.uiLabel66);
             this.uiGroupBox18.Controls.Add(this.btnPotConn12);
             this.uiGroupBox18.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox18.Location = new System.Drawing.Point(330, 28);
+            this.uiGroupBox18.Location = new System.Drawing.Point(326, 31);
             this.uiGroupBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox18.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox18.Name = "uiGroupBox18";
             this.uiGroupBox18.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox18.Radius = 20;
             this.uiGroupBox18.Size = new System.Drawing.Size(283, 321);
-            this.uiGroupBox18.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox18.TabIndex = 11;
             this.uiGroupBox18.Text = null;
             // 
             // uiComboBox34
             // 
-            this.uiComboBox34.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox34.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "六层阀门串口2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.uiComboBox34.FillColor = System.Drawing.Color.White;
             this.uiComboBox34.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1654,8 +1610,7 @@ namespace ON4
             this.uiComboBox34.Name = "uiComboBox34";
             this.uiComboBox34.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox34.Radius = 20;
-            this.uiComboBox34.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox34.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox34.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox34.TabIndex = 15;
             this.uiComboBox34.Text = global::ON4.Properties.Settings.Default.六层阀门串口2;
             this.uiComboBox34.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1663,7 +1618,7 @@ namespace ON4
             // 
             // uiComboBox35
             // 
-            this.uiComboBox35.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox35.FillColor = System.Drawing.Color.White;
             this.uiComboBox35.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox35.Items.AddRange(new object[] {
@@ -1685,15 +1640,14 @@ namespace ON4
             this.uiComboBox35.Name = "uiComboBox35";
             this.uiComboBox35.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox35.Radius = 20;
-            this.uiComboBox35.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox35.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox35.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox35.TabIndex = 14;
             this.uiComboBox35.Text = "9600";
             this.uiComboBox35.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox36
             // 
-            this.uiComboBox36.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox36.FillColor = System.Drawing.Color.White;
             this.uiComboBox36.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox36.Items.AddRange(new object[] {
@@ -1708,15 +1662,14 @@ namespace ON4
             this.uiComboBox36.Name = "uiComboBox36";
             this.uiComboBox36.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox36.Radius = 20;
-            this.uiComboBox36.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox36.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox36.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox36.TabIndex = 13;
             this.uiComboBox36.Text = "Even";
             this.uiComboBox36.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox37
             // 
-            this.uiComboBox37.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox37.FillColor = System.Drawing.Color.White;
             this.uiComboBox37.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox37.Items.AddRange(new object[] {
@@ -1728,15 +1681,14 @@ namespace ON4
             this.uiComboBox37.Name = "uiComboBox37";
             this.uiComboBox37.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox37.Radius = 20;
-            this.uiComboBox37.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox37.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox37.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox37.TabIndex = 12;
             this.uiComboBox37.Text = "8";
             this.uiComboBox37.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox38
             // 
-            this.uiComboBox38.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox38.FillColor = System.Drawing.Color.White;
             this.uiComboBox38.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox38.Items.AddRange(new object[] {
@@ -1749,75 +1701,69 @@ namespace ON4
             this.uiComboBox38.Name = "uiComboBox38";
             this.uiComboBox38.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox38.Radius = 20;
-            this.uiComboBox38.Size = new System.Drawing.Size(117, 34);
-            this.uiComboBox38.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox38.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox38.TabIndex = 11;
             this.uiComboBox38.Text = "One";
             this.uiComboBox38.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel62
             // 
-            this.uiLabel62.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel62.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel62.Location = new System.Drawing.Point(32, 80);
             this.uiLabel62.Name = "uiLabel62";
             this.uiLabel62.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel62.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel62.TabIndex = 8;
             this.uiLabel62.Text = "串口：";
             this.uiLabel62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel63
             // 
-            this.uiLabel63.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel63.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel63.Location = new System.Drawing.Point(32, 127);
             this.uiLabel63.Name = "uiLabel63";
             this.uiLabel63.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel63.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel63.TabIndex = 7;
             this.uiLabel63.Text = "波特率：";
             this.uiLabel63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel64
             // 
-            this.uiLabel64.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel64.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel64.Location = new System.Drawing.Point(32, 174);
             this.uiLabel64.Name = "uiLabel64";
             this.uiLabel64.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel64.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel64.TabIndex = 6;
             this.uiLabel64.Text = "校验位：";
             this.uiLabel64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel65
             // 
-            this.uiLabel65.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel65.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel65.Location = new System.Drawing.Point(32, 221);
             this.uiLabel65.Name = "uiLabel65";
             this.uiLabel65.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel65.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel65.TabIndex = 5;
             this.uiLabel65.Text = "数据位：";
             this.uiLabel65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel66
             // 
-            this.uiLabel66.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel66.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel66.Location = new System.Drawing.Point(32, 268);
             this.uiLabel66.Name = "uiLabel66";
             this.uiLabel66.Size = new System.Drawing.Size(97, 23);
-            this.uiLabel66.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel66.TabIndex = 4;
             this.uiLabel66.Text = "停止位：";
             this.uiLabel66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPotConn12
             // 
-            this.btnPotConn12.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn12.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn12.Location = new System.Drawing.Point(111, 28);
@@ -1825,7 +1771,6 @@ namespace ON4
             this.btnPotConn12.Name = "btnPotConn12";
             this.btnPotConn12.Radius = 20;
             this.btnPotConn12.Size = new System.Drawing.Size(117, 34);
-            this.btnPotConn12.Style = Sunny.UI.UIStyle.Custom;
             this.btnPotConn12.TabIndex = 10;
             this.btnPotConn12.Text = "连接";
             this.btnPotConn12.Click += new System.EventHandler(this.btnPotConn12_Click);
@@ -1834,15 +1779,14 @@ namespace ON4
             // 
             this.uiGroupBox11.Controls.Add(this.uiGroupBox14);
             this.uiGroupBox11.Controls.Add(this.uiGroupBox15);
-            this.uiGroupBox11.FillColor = System.Drawing.Color.LightBlue;
             this.uiGroupBox11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox11.Location = new System.Drawing.Point(835, 528);
-            this.uiGroupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox11.Location = new System.Drawing.Point(626, 422);
+            this.uiGroupBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox11.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox11.Name = "uiGroupBox11";
-            this.uiGroupBox11.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox11.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox11.Radius = 20;
-            this.uiGroupBox11.Size = new System.Drawing.Size(632, 364);
+            this.uiGroupBox11.Size = new System.Drawing.Size(474, 291);
             this.uiGroupBox11.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox11.TabIndex = 0;
             this.uiGroupBox11.Text = "四层阀门";
@@ -1862,7 +1806,7 @@ namespace ON4
             this.uiGroupBox14.Controls.Add(this.uiLabel32);
             this.uiGroupBox14.Controls.Add(this.uiLabel33);
             this.uiGroupBox14.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox14.Location = new System.Drawing.Point(15, 28);
+            this.uiGroupBox14.Location = new System.Drawing.Point(17, 26);
             this.uiGroupBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox14.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox14.Name = "uiGroupBox14";
@@ -1875,7 +1819,7 @@ namespace ON4
             // 
             // cboPot6
             // 
-            this.cboPot6.BackColor = System.Drawing.Color.LightBlue;
+            this.cboPot6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboPot6.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "四层阀门串口", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cboPot6.FillColor = System.Drawing.Color.White;
             this.cboPot6.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1885,7 +1829,7 @@ namespace ON4
             this.cboPot6.Name = "cboPot6";
             this.cboPot6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot6.Radius = 20;
-            this.cboPot6.Size = new System.Drawing.Size(117, 34);
+            this.cboPot6.Size = new System.Drawing.Size(117, 29);
             this.cboPot6.Style = Sunny.UI.UIStyle.Custom;
             this.cboPot6.TabIndex = 15;
             this.cboPot6.Text = global::ON4.Properties.Settings.Default.四层阀门串口;
@@ -1894,7 +1838,7 @@ namespace ON4
             // 
             // btnPotConn6
             // 
-            this.btnPotConn6.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn6.Location = new System.Drawing.Point(111, 28);
@@ -1909,7 +1853,7 @@ namespace ON4
             // 
             // uiLabel35
             // 
-            this.uiLabel35.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel35.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel35.Location = new System.Drawing.Point(32, 80);
             this.uiLabel35.Name = "uiLabel35";
@@ -1921,7 +1865,7 @@ namespace ON4
             // 
             // uiComboBox3
             // 
-            this.uiComboBox3.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox3.FillColor = System.Drawing.Color.White;
             this.uiComboBox3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox3.Items.AddRange(new object[] {
@@ -1943,7 +1887,7 @@ namespace ON4
             this.uiComboBox3.Name = "uiComboBox3";
             this.uiComboBox3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox3.Radius = 20;
-            this.uiComboBox3.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox3.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox3.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox3.TabIndex = 14;
             this.uiComboBox3.Text = "9600";
@@ -1951,7 +1895,7 @@ namespace ON4
             // 
             // uiComboBox4
             // 
-            this.uiComboBox4.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox4.FillColor = System.Drawing.Color.White;
             this.uiComboBox4.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox4.Items.AddRange(new object[] {
@@ -1966,7 +1910,7 @@ namespace ON4
             this.uiComboBox4.Name = "uiComboBox4";
             this.uiComboBox4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox4.Radius = 20;
-            this.uiComboBox4.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox4.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox4.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox4.TabIndex = 13;
             this.uiComboBox4.Text = "Even";
@@ -1974,7 +1918,7 @@ namespace ON4
             // 
             // uiComboBox5
             // 
-            this.uiComboBox5.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox5.FillColor = System.Drawing.Color.White;
             this.uiComboBox5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox5.Items.AddRange(new object[] {
@@ -1986,7 +1930,7 @@ namespace ON4
             this.uiComboBox5.Name = "uiComboBox5";
             this.uiComboBox5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox5.Radius = 20;
-            this.uiComboBox5.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox5.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox5.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox5.TabIndex = 12;
             this.uiComboBox5.Text = "8";
@@ -1994,7 +1938,7 @@ namespace ON4
             // 
             // uiComboBox28
             // 
-            this.uiComboBox28.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox28.FillColor = System.Drawing.Color.White;
             this.uiComboBox28.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox28.Items.AddRange(new object[] {
@@ -2007,7 +1951,7 @@ namespace ON4
             this.uiComboBox28.Name = "uiComboBox28";
             this.uiComboBox28.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox28.Radius = 20;
-            this.uiComboBox28.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox28.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox28.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox28.TabIndex = 11;
             this.uiComboBox28.Text = "One";
@@ -2015,7 +1959,7 @@ namespace ON4
             // 
             // uiLabel31
             // 
-            this.uiLabel31.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel31.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel31.Location = new System.Drawing.Point(32, 268);
             this.uiLabel31.Name = "uiLabel31";
@@ -2027,7 +1971,7 @@ namespace ON4
             // 
             // uiLabel34
             // 
-            this.uiLabel34.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel34.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel34.Location = new System.Drawing.Point(32, 127);
             this.uiLabel34.Name = "uiLabel34";
@@ -2039,7 +1983,7 @@ namespace ON4
             // 
             // uiLabel32
             // 
-            this.uiLabel32.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel32.Location = new System.Drawing.Point(32, 221);
             this.uiLabel32.Name = "uiLabel32";
@@ -2051,7 +1995,7 @@ namespace ON4
             // 
             // uiLabel33
             // 
-            this.uiLabel33.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel33.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel33.Location = new System.Drawing.Point(32, 174);
             this.uiLabel33.Name = "uiLabel33";
@@ -2075,7 +2019,7 @@ namespace ON4
             this.uiGroupBox15.Controls.Add(this.uiLabel56);
             this.uiGroupBox15.Controls.Add(this.btnPotConn10);
             this.uiGroupBox15.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox15.Location = new System.Drawing.Point(330, 28);
+            this.uiGroupBox15.Location = new System.Drawing.Point(322, 26);
             this.uiGroupBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox15.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox15.Name = "uiGroupBox15";
@@ -2088,7 +2032,7 @@ namespace ON4
             // 
             // uiComboBox23
             // 
-            this.uiComboBox23.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox23.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "四层阀门串口2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.uiComboBox23.FillColor = System.Drawing.Color.White;
             this.uiComboBox23.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -2098,7 +2042,7 @@ namespace ON4
             this.uiComboBox23.Name = "uiComboBox23";
             this.uiComboBox23.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox23.Radius = 20;
-            this.uiComboBox23.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox23.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox23.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox23.TabIndex = 15;
             this.uiComboBox23.Text = global::ON4.Properties.Settings.Default.四层阀门串口2;
@@ -2107,7 +2051,7 @@ namespace ON4
             // 
             // uiComboBox27
             // 
-            this.uiComboBox27.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox27.FillColor = System.Drawing.Color.White;
             this.uiComboBox27.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox27.Items.AddRange(new object[] {
@@ -2129,7 +2073,7 @@ namespace ON4
             this.uiComboBox27.Name = "uiComboBox27";
             this.uiComboBox27.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox27.Radius = 20;
-            this.uiComboBox27.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox27.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox27.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox27.TabIndex = 14;
             this.uiComboBox27.Text = "9600";
@@ -2137,7 +2081,7 @@ namespace ON4
             // 
             // uiComboBox26
             // 
-            this.uiComboBox26.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox26.FillColor = System.Drawing.Color.White;
             this.uiComboBox26.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox26.Items.AddRange(new object[] {
@@ -2152,7 +2096,7 @@ namespace ON4
             this.uiComboBox26.Name = "uiComboBox26";
             this.uiComboBox26.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox26.Radius = 20;
-            this.uiComboBox26.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox26.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox26.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox26.TabIndex = 13;
             this.uiComboBox26.Text = "Even";
@@ -2160,7 +2104,7 @@ namespace ON4
             // 
             // uiComboBox25
             // 
-            this.uiComboBox25.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox25.FillColor = System.Drawing.Color.White;
             this.uiComboBox25.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox25.Items.AddRange(new object[] {
@@ -2172,7 +2116,7 @@ namespace ON4
             this.uiComboBox25.Name = "uiComboBox25";
             this.uiComboBox25.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox25.Radius = 20;
-            this.uiComboBox25.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox25.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox25.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox25.TabIndex = 12;
             this.uiComboBox25.Text = "8";
@@ -2180,7 +2124,7 @@ namespace ON4
             // 
             // uiComboBox24
             // 
-            this.uiComboBox24.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox24.FillColor = System.Drawing.Color.White;
             this.uiComboBox24.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox24.Items.AddRange(new object[] {
@@ -2193,7 +2137,7 @@ namespace ON4
             this.uiComboBox24.Name = "uiComboBox24";
             this.uiComboBox24.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox24.Radius = 20;
-            this.uiComboBox24.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox24.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox24.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox24.TabIndex = 11;
             this.uiComboBox24.Text = "One";
@@ -2201,7 +2145,7 @@ namespace ON4
             // 
             // uiLabel52
             // 
-            this.uiLabel52.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel52.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel52.Location = new System.Drawing.Point(32, 80);
             this.uiLabel52.Name = "uiLabel52";
@@ -2213,7 +2157,7 @@ namespace ON4
             // 
             // uiLabel53
             // 
-            this.uiLabel53.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel53.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel53.Location = new System.Drawing.Point(32, 127);
             this.uiLabel53.Name = "uiLabel53";
@@ -2225,7 +2169,7 @@ namespace ON4
             // 
             // uiLabel54
             // 
-            this.uiLabel54.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel54.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel54.Location = new System.Drawing.Point(32, 174);
             this.uiLabel54.Name = "uiLabel54";
@@ -2237,7 +2181,7 @@ namespace ON4
             // 
             // uiLabel55
             // 
-            this.uiLabel55.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel55.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel55.Location = new System.Drawing.Point(32, 221);
             this.uiLabel55.Name = "uiLabel55";
@@ -2249,7 +2193,7 @@ namespace ON4
             // 
             // uiLabel56
             // 
-            this.uiLabel56.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel56.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel56.Location = new System.Drawing.Point(32, 268);
             this.uiLabel56.Name = "uiLabel56";
@@ -2261,7 +2205,7 @@ namespace ON4
             // 
             // btnPotConn10
             // 
-            this.btnPotConn10.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn10.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn10.Location = new System.Drawing.Point(111, 28);
@@ -2278,15 +2222,14 @@ namespace ON4
             // 
             this.uiGroupBox10.Controls.Add(this.uiGroupBox4);
             this.uiGroupBox10.Controls.Add(this.uiGroupBox3);
-            this.uiGroupBox10.FillColor = System.Drawing.Color.LightBlue;
             this.uiGroupBox10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox10.Location = new System.Drawing.Point(177, 528);
-            this.uiGroupBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox10.Location = new System.Drawing.Point(133, 422);
+            this.uiGroupBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox10.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox10.Name = "uiGroupBox10";
-            this.uiGroupBox10.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox10.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox10.Radius = 20;
-            this.uiGroupBox10.Size = new System.Drawing.Size(632, 364);
+            this.uiGroupBox10.Size = new System.Drawing.Size(474, 291);
             this.uiGroupBox10.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox10.TabIndex = 0;
             this.uiGroupBox10.Text = "三层阀门";
@@ -2306,7 +2249,7 @@ namespace ON4
             this.uiGroupBox4.Controls.Add(this.uiLabel22);
             this.uiGroupBox4.Controls.Add(this.uiLabel30);
             this.uiGroupBox4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox4.Location = new System.Drawing.Point(15, 28);
+            this.uiGroupBox4.Location = new System.Drawing.Point(25, 28);
             this.uiGroupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox4.Name = "uiGroupBox4";
@@ -2319,7 +2262,7 @@ namespace ON4
             // 
             // cboPot5
             // 
-            this.cboPot5.BackColor = System.Drawing.Color.LightBlue;
+            this.cboPot5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboPot5.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "三层阀门串口", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cboPot5.FillColor = System.Drawing.Color.White;
             this.cboPot5.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -2329,7 +2272,7 @@ namespace ON4
             this.cboPot5.Name = "cboPot5";
             this.cboPot5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot5.Radius = 20;
-            this.cboPot5.Size = new System.Drawing.Size(117, 34);
+            this.cboPot5.Size = new System.Drawing.Size(117, 29);
             this.cboPot5.Style = Sunny.UI.UIStyle.Custom;
             this.cboPot5.TabIndex = 26;
             this.cboPot5.Text = global::ON4.Properties.Settings.Default.三层阀门串口;
@@ -2337,7 +2280,7 @@ namespace ON4
             // 
             // cboBri5
             // 
-            this.cboBri5.BackColor = System.Drawing.Color.LightBlue;
+            this.cboBri5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboBri5.FillColor = System.Drawing.Color.White;
             this.cboBri5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboBri5.Items.AddRange(new object[] {
@@ -2359,7 +2302,7 @@ namespace ON4
             this.cboBri5.Name = "cboBri5";
             this.cboBri5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboBri5.Radius = 20;
-            this.cboBri5.Size = new System.Drawing.Size(117, 34);
+            this.cboBri5.Size = new System.Drawing.Size(117, 29);
             this.cboBri5.Style = Sunny.UI.UIStyle.Custom;
             this.cboBri5.TabIndex = 25;
             this.cboBri5.Text = "9600";
@@ -2367,7 +2310,7 @@ namespace ON4
             // 
             // cboChe5
             // 
-            this.cboChe5.BackColor = System.Drawing.Color.LightBlue;
+            this.cboChe5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboChe5.FillColor = System.Drawing.Color.White;
             this.cboChe5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboChe5.Items.AddRange(new object[] {
@@ -2382,7 +2325,7 @@ namespace ON4
             this.cboChe5.Name = "cboChe5";
             this.cboChe5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboChe5.Radius = 20;
-            this.cboChe5.Size = new System.Drawing.Size(117, 34);
+            this.cboChe5.Size = new System.Drawing.Size(117, 29);
             this.cboChe5.Style = Sunny.UI.UIStyle.Custom;
             this.cboChe5.TabIndex = 24;
             this.cboChe5.Text = "Even";
@@ -2390,7 +2333,7 @@ namespace ON4
             // 
             // cboData5
             // 
-            this.cboData5.BackColor = System.Drawing.Color.LightBlue;
+            this.cboData5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboData5.FillColor = System.Drawing.Color.White;
             this.cboData5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboData5.Items.AddRange(new object[] {
@@ -2402,7 +2345,7 @@ namespace ON4
             this.cboData5.Name = "cboData5";
             this.cboData5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboData5.Radius = 20;
-            this.cboData5.Size = new System.Drawing.Size(117, 34);
+            this.cboData5.Size = new System.Drawing.Size(117, 29);
             this.cboData5.Style = Sunny.UI.UIStyle.Custom;
             this.cboData5.TabIndex = 23;
             this.cboData5.Text = "8";
@@ -2410,7 +2353,7 @@ namespace ON4
             // 
             // cboStop5
             // 
-            this.cboStop5.BackColor = System.Drawing.Color.LightBlue;
+            this.cboStop5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.cboStop5.FillColor = System.Drawing.Color.White;
             this.cboStop5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.cboStop5.Items.AddRange(new object[] {
@@ -2423,7 +2366,7 @@ namespace ON4
             this.cboStop5.Name = "cboStop5";
             this.cboStop5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboStop5.Radius = 20;
-            this.cboStop5.Size = new System.Drawing.Size(117, 34);
+            this.cboStop5.Size = new System.Drawing.Size(117, 29);
             this.cboStop5.Style = Sunny.UI.UIStyle.Custom;
             this.cboStop5.TabIndex = 22;
             this.cboStop5.Text = "One";
@@ -2431,7 +2374,7 @@ namespace ON4
             // 
             // btnPotConn5
             // 
-            this.btnPotConn5.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn5.Location = new System.Drawing.Point(111, 28);
@@ -2446,7 +2389,7 @@ namespace ON4
             // 
             // uiLabel18
             // 
-            this.uiLabel18.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel18.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel18.Location = new System.Drawing.Point(32, 268);
             this.uiLabel18.Name = "uiLabel18";
@@ -2458,7 +2401,7 @@ namespace ON4
             // 
             // uiLabel20
             // 
-            this.uiLabel20.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel20.Location = new System.Drawing.Point(32, 221);
             this.uiLabel20.Name = "uiLabel20";
@@ -2470,7 +2413,7 @@ namespace ON4
             // 
             // uiLabel21
             // 
-            this.uiLabel21.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel21.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel21.Location = new System.Drawing.Point(32, 174);
             this.uiLabel21.Name = "uiLabel21";
@@ -2482,7 +2425,7 @@ namespace ON4
             // 
             // uiLabel22
             // 
-            this.uiLabel22.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel22.Location = new System.Drawing.Point(32, 127);
             this.uiLabel22.Name = "uiLabel22";
@@ -2494,7 +2437,7 @@ namespace ON4
             // 
             // uiLabel30
             // 
-            this.uiLabel30.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel30.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel30.Location = new System.Drawing.Point(32, 80);
             this.uiLabel30.Name = "uiLabel30";
@@ -2518,7 +2461,7 @@ namespace ON4
             this.uiGroupBox3.Controls.Add(this.uiLabel51);
             this.uiGroupBox3.Controls.Add(this.btnPotConn9);
             this.uiGroupBox3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox3.Location = new System.Drawing.Point(332, 28);
+            this.uiGroupBox3.Location = new System.Drawing.Point(328, 28);
             this.uiGroupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox3.Name = "uiGroupBox3";
@@ -2531,7 +2474,7 @@ namespace ON4
             // 
             // uiComboBox22
             // 
-            this.uiComboBox22.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox22.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ON4.Properties.Settings.Default, "三层阀门串口2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.uiComboBox22.FillColor = System.Drawing.Color.White;
             this.uiComboBox22.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -2541,7 +2484,7 @@ namespace ON4
             this.uiComboBox22.Name = "uiComboBox22";
             this.uiComboBox22.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox22.Radius = 20;
-            this.uiComboBox22.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox22.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox22.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox22.TabIndex = 15;
             this.uiComboBox22.Text = global::ON4.Properties.Settings.Default.三层阀门串口2;
@@ -2550,7 +2493,7 @@ namespace ON4
             // 
             // uiComboBox21
             // 
-            this.uiComboBox21.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox21.FillColor = System.Drawing.Color.White;
             this.uiComboBox21.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox21.Items.AddRange(new object[] {
@@ -2572,7 +2515,7 @@ namespace ON4
             this.uiComboBox21.Name = "uiComboBox21";
             this.uiComboBox21.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox21.Radius = 20;
-            this.uiComboBox21.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox21.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox21.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox21.TabIndex = 14;
             this.uiComboBox21.Text = "9600";
@@ -2580,7 +2523,7 @@ namespace ON4
             // 
             // uiComboBox20
             // 
-            this.uiComboBox20.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox20.FillColor = System.Drawing.Color.White;
             this.uiComboBox20.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox20.Items.AddRange(new object[] {
@@ -2595,7 +2538,7 @@ namespace ON4
             this.uiComboBox20.Name = "uiComboBox20";
             this.uiComboBox20.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox20.Radius = 20;
-            this.uiComboBox20.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox20.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox20.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox20.TabIndex = 13;
             this.uiComboBox20.Text = "Even";
@@ -2603,7 +2546,7 @@ namespace ON4
             // 
             // uiComboBox19
             // 
-            this.uiComboBox19.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox19.FillColor = System.Drawing.Color.White;
             this.uiComboBox19.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox19.Items.AddRange(new object[] {
@@ -2615,7 +2558,7 @@ namespace ON4
             this.uiComboBox19.Name = "uiComboBox19";
             this.uiComboBox19.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox19.Radius = 20;
-            this.uiComboBox19.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox19.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox19.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox19.TabIndex = 12;
             this.uiComboBox19.Text = "8";
@@ -2623,7 +2566,7 @@ namespace ON4
             // 
             // uiComboBox14
             // 
-            this.uiComboBox14.BackColor = System.Drawing.Color.LightBlue;
+            this.uiComboBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiComboBox14.FillColor = System.Drawing.Color.White;
             this.uiComboBox14.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiComboBox14.Items.AddRange(new object[] {
@@ -2636,7 +2579,7 @@ namespace ON4
             this.uiComboBox14.Name = "uiComboBox14";
             this.uiComboBox14.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox14.Radius = 20;
-            this.uiComboBox14.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox14.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox14.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox14.TabIndex = 11;
             this.uiComboBox14.Text = "One";
@@ -2644,7 +2587,7 @@ namespace ON4
             // 
             // uiLabel47
             // 
-            this.uiLabel47.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel47.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel47.Location = new System.Drawing.Point(32, 80);
             this.uiLabel47.Name = "uiLabel47";
@@ -2656,7 +2599,7 @@ namespace ON4
             // 
             // uiLabel48
             // 
-            this.uiLabel48.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel48.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel48.Location = new System.Drawing.Point(32, 127);
             this.uiLabel48.Name = "uiLabel48";
@@ -2668,7 +2611,7 @@ namespace ON4
             // 
             // uiLabel49
             // 
-            this.uiLabel49.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel49.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel49.Location = new System.Drawing.Point(32, 174);
             this.uiLabel49.Name = "uiLabel49";
@@ -2680,7 +2623,7 @@ namespace ON4
             // 
             // uiLabel50
             // 
-            this.uiLabel50.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel50.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel50.Location = new System.Drawing.Point(32, 221);
             this.uiLabel50.Name = "uiLabel50";
@@ -2692,7 +2635,7 @@ namespace ON4
             // 
             // uiLabel51
             // 
-            this.uiLabel51.BackColor = System.Drawing.Color.LightBlue;
+            this.uiLabel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiLabel51.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel51.Location = new System.Drawing.Point(32, 268);
             this.uiLabel51.Name = "uiLabel51";
@@ -2704,7 +2647,7 @@ namespace ON4
             // 
             // btnPotConn9
             // 
-            this.btnPotConn9.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPotConn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.btnPotConn9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPotConn9.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnPotConn9.Location = new System.Drawing.Point(111, 28);
@@ -2725,13 +2668,13 @@ namespace ON4
             this.uiGroupBox2.Controls.Add(this.uiLabel2);
             this.uiGroupBox2.Controls.Add(this.btnPotRed);
             this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox2.Location = new System.Drawing.Point(177, 102);
-            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox2.Location = new System.Drawing.Point(133, 82);
+            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
-            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox2.Radius = 20;
-            this.uiGroupBox2.Size = new System.Drawing.Size(1003, 111);
+            this.uiGroupBox2.Size = new System.Drawing.Size(752, 89);
             this.uiGroupBox2.TabIndex = 10;
             this.uiGroupBox2.Text = "普通读表";
             // 
@@ -2766,7 +2709,7 @@ namespace ON4
             this.txtTableNumber1.Name = "txtTableNumber1";
             this.txtTableNumber1.Padding = new System.Windows.Forms.Padding(5);
             this.txtTableNumber1.Radius = 20;
-            this.txtTableNumber1.Size = new System.Drawing.Size(117, 34);
+            this.txtTableNumber1.Size = new System.Drawing.Size(117, 29);
             this.txtTableNumber1.TabIndex = 5;
             // 
             // btnClear
@@ -2806,6 +2749,7 @@ namespace ON4
             this.btnPotRed.Name = "btnPotRed";
             this.btnPotRed.Radius = 20;
             this.btnPotRed.Size = new System.Drawing.Size(100, 35);
+            this.btnPotRed.Style = Sunny.UI.UIStyle.Custom;
             this.btnPotRed.TabIndex = 6;
             this.btnPotRed.Text = "点动读取";
             this.btnPotRed.Click += new System.EventHandler(this.PotRed_Click);
@@ -2814,12 +2758,12 @@ namespace ON4
             // 
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btnRefresh.Location = new System.Drawing.Point(1187, 104);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(890, 125);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Radius = 20;
-            this.btnRefresh.Size = new System.Drawing.Size(111, 111);
+            this.btnRefresh.Size = new System.Drawing.Size(84, 23);
             this.btnRefresh.TabIndex = 9;
             this.btnRefresh.Text = "串口刷新";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -2838,13 +2782,13 @@ namespace ON4
             this.uiGroupBox7.Controls.Add(this.uiLabel9);
             this.uiGroupBox7.Controls.Add(this.uiLabel10);
             this.uiGroupBox7.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox7.Location = new System.Drawing.Point(177, 395);
-            this.uiGroupBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox7.Location = new System.Drawing.Point(133, 316);
+            this.uiGroupBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox7.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox7.Name = "uiGroupBox7";
-            this.uiGroupBox7.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox7.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox7.Radius = 20;
-            this.uiGroupBox7.Size = new System.Drawing.Size(1519, 112);
+            this.uiGroupBox7.Size = new System.Drawing.Size(1139, 90);
             this.uiGroupBox7.TabIndex = 0;
             this.uiGroupBox7.Text = "楼层四";
             this.uiGroupBox7.Visible = false;
@@ -2860,7 +2804,7 @@ namespace ON4
             this.cboPot2.Name = "cboPot2";
             this.cboPot2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot2.Radius = 20;
-            this.cboPot2.Size = new System.Drawing.Size(117, 34);
+            this.cboPot2.Size = new System.Drawing.Size(117, 29);
             this.cboPot2.TabIndex = 15;
             this.cboPot2.Text = global::ON4.Properties.Settings.Default.楼层四串口;
             this.cboPot2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2889,7 +2833,7 @@ namespace ON4
             this.cboBri2.Name = "cboBri2";
             this.cboBri2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboBri2.Radius = 20;
-            this.cboBri2.Size = new System.Drawing.Size(106, 34);
+            this.cboBri2.Size = new System.Drawing.Size(106, 29);
             this.cboBri2.TabIndex = 14;
             this.cboBri2.Text = "2400";
             this.cboBri2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2910,7 +2854,7 @@ namespace ON4
             this.cboChe2.Name = "cboChe2";
             this.cboChe2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboChe2.Radius = 20;
-            this.cboChe2.Size = new System.Drawing.Size(106, 34);
+            this.cboChe2.Size = new System.Drawing.Size(106, 29);
             this.cboChe2.TabIndex = 13;
             this.cboChe2.Text = "Even";
             this.cboChe2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2928,7 +2872,7 @@ namespace ON4
             this.cboData2.Name = "cboData2";
             this.cboData2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboData2.Radius = 20;
-            this.cboData2.Size = new System.Drawing.Size(106, 34);
+            this.cboData2.Size = new System.Drawing.Size(106, 29);
             this.cboData2.TabIndex = 12;
             this.cboData2.Text = "8";
             this.cboData2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2947,7 +2891,7 @@ namespace ON4
             this.cboStop2.Name = "cboStop2";
             this.cboStop2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboStop2.Radius = 20;
-            this.cboStop2.Size = new System.Drawing.Size(106, 34);
+            this.cboStop2.Size = new System.Drawing.Size(106, 29);
             this.cboStop2.TabIndex = 11;
             this.cboStop2.Text = "One";
             this.cboStop2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3029,13 +2973,13 @@ namespace ON4
             this.uiGroupBox6.Controls.Add(this.uiLabel24);
             this.uiGroupBox6.Controls.Add(this.uiLabel19);
             this.uiGroupBox6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox6.Location = new System.Drawing.Point(177, 276);
-            this.uiGroupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox6.Location = new System.Drawing.Point(133, 221);
+            this.uiGroupBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uiGroupBox6.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox6.Name = "uiGroupBox6";
-            this.uiGroupBox6.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox6.Padding = new System.Windows.Forms.Padding(0, 26, 0, 0);
             this.uiGroupBox6.Radius = 20;
-            this.uiGroupBox6.Size = new System.Drawing.Size(1519, 112);
+            this.uiGroupBox6.Size = new System.Drawing.Size(1139, 90);
             this.uiGroupBox6.TabIndex = 0;
             this.uiGroupBox6.Text = "楼层三";
             this.uiGroupBox6.Visible = false;
@@ -3051,7 +2995,7 @@ namespace ON4
             this.cboPot1.Name = "cboPot1";
             this.cboPot1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboPot1.Radius = 20;
-            this.cboPot1.Size = new System.Drawing.Size(117, 34);
+            this.cboPot1.Size = new System.Drawing.Size(117, 29);
             this.cboPot1.TabIndex = 15;
             this.cboPot1.Text = global::ON4.Properties.Settings.Default.楼层三串口;
             this.cboPot1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3080,7 +3024,7 @@ namespace ON4
             this.cboBri1.Name = "cboBri1";
             this.cboBri1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboBri1.Radius = 20;
-            this.cboBri1.Size = new System.Drawing.Size(106, 34);
+            this.cboBri1.Size = new System.Drawing.Size(106, 29);
             this.cboBri1.TabIndex = 14;
             this.cboBri1.Text = "2400";
             this.cboBri1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3101,7 +3045,7 @@ namespace ON4
             this.cboChe1.Name = "cboChe1";
             this.cboChe1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboChe1.Radius = 20;
-            this.cboChe1.Size = new System.Drawing.Size(106, 34);
+            this.cboChe1.Size = new System.Drawing.Size(106, 29);
             this.cboChe1.TabIndex = 13;
             this.cboChe1.Text = "Even";
             this.cboChe1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3119,7 +3063,7 @@ namespace ON4
             this.cboData1.Name = "cboData1";
             this.cboData1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboData1.Radius = 20;
-            this.cboData1.Size = new System.Drawing.Size(106, 34);
+            this.cboData1.Size = new System.Drawing.Size(106, 29);
             this.cboData1.TabIndex = 12;
             this.cboData1.Text = "8";
             this.cboData1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3138,7 +3082,7 @@ namespace ON4
             this.cboStop1.Name = "cboStop1";
             this.cboStop1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboStop1.Radius = 20;
-            this.cboStop1.Size = new System.Drawing.Size(106, 34);
+            this.cboStop1.Size = new System.Drawing.Size(106, 29);
             this.cboStop1.TabIndex = 11;
             this.cboStop1.Text = "One";
             this.cboStop1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3209,18 +3153,18 @@ namespace ON4
             // uiDataGridView1
             // 
             this.uiDataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.uiDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("微软雅黑", 12F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.uiDataGridView1.ColumnHeadersHeight = 32;
             this.uiDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3239,17 +3183,17 @@ namespace ON4
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.Location = new System.Drawing.Point(171, 0);
-            this.uiDataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uiDataGridView1.Location = new System.Drawing.Point(128, 0);
+            this.uiDataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.uiDataGridView1.Name = "uiDataGridView1";
             this.uiDataGridView1.ReadOnly = true;
             this.uiDataGridView1.RowHeadersWidth = 10;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.uiDataGridView1.RowTemplate.Height = 29;
             this.uiDataGridView1.SelectedIndex = -1;
             this.uiDataGridView1.ShowGridLine = true;
-            this.uiDataGridView1.Size = new System.Drawing.Size(1753, 94);
+            this.uiDataGridView1.Size = new System.Drawing.Size(1315, 75);
             this.uiDataGridView1.TabIndex = 7;
             // 
             // Column1
@@ -3344,18 +3288,18 @@ namespace ON4
             // 
             this.dgvScoreList1.AllowUserToAddRows = false;
             this.dgvScoreList1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.dgvScoreList1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.dgvScoreList1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvScoreList1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvScoreList1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvScoreList1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("微软雅黑", 12F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvScoreList1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvScoreList1.ColumnHeadersHeight = 32;
             this.dgvScoreList1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvScoreList1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3366,16 +3310,16 @@ namespace ON4
             this.dgvScoreList1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.dgvScoreList1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgvScoreList1.Location = new System.Drawing.Point(0, 0);
-            this.dgvScoreList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvScoreList1.Margin = new System.Windows.Forms.Padding(2);
             this.dgvScoreList1.Name = "dgvScoreList1";
             this.dgvScoreList1.ReadOnly = true;
             this.dgvScoreList1.RowHeadersWidth = 10;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.dgvScoreList1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            this.dgvScoreList1.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvScoreList1.RowTemplate.Height = 29;
             this.dgvScoreList1.SelectedIndex = -1;
             this.dgvScoreList1.ShowGridLine = true;
-            this.dgvScoreList1.Size = new System.Drawing.Size(171, 954);
+            this.dgvScoreList1.Size = new System.Drawing.Size(128, 764);
             this.dgvScoreList1.TabIndex = 4;
             this.dgvScoreList1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScoreList1_CellDoubleClick);
             // 
@@ -3405,13 +3349,13 @@ namespace ON4
             this.uiComboBox2.Items.AddRange(new object[] {
             "三四层",
             "五六层"});
-            this.uiComboBox2.Location = new System.Drawing.Point(1475, 528);
-            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox2.Location = new System.Drawing.Point(1106, 422);
+            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uiComboBox2.MinimumSize = new System.Drawing.Size(47, 0);
             this.uiComboBox2.Name = "uiComboBox2";
             this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox2.Radius = 20;
-            this.uiComboBox2.Size = new System.Drawing.Size(107, 34);
+            this.uiComboBox2.Size = new System.Drawing.Size(80, 29);
             this.uiComboBox2.TabIndex = 4;
             this.uiComboBox2.Text = "三四层";
             this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3425,13 +3369,13 @@ namespace ON4
             this.uiComboBox8.Items.AddRange(new object[] {
             "三四层",
             "五六层"});
-            this.uiComboBox8.Location = new System.Drawing.Point(187, 222);
-            this.uiComboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox8.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox8.Location = new System.Drawing.Point(140, 178);
+            this.uiComboBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uiComboBox8.MinimumSize = new System.Drawing.Size(47, 0);
             this.uiComboBox8.Name = "uiComboBox8";
             this.uiComboBox8.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox8.Radius = 20;
-            this.uiComboBox8.Size = new System.Drawing.Size(107, 34);
+            this.uiComboBox8.Size = new System.Drawing.Size(80, 29);
             this.uiComboBox8.TabIndex = 4;
             this.uiComboBox8.Text = "三四层";
             this.uiComboBox8.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3452,7 +3396,7 @@ namespace ON4
             this.uiComboBox7.Name = "uiComboBox7";
             this.uiComboBox7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBox7.Radius = 20;
-            this.uiComboBox7.Size = new System.Drawing.Size(117, 34);
+            this.uiComboBox7.Size = new System.Drawing.Size(117, 29);
             this.uiComboBox7.Style = Sunny.UI.UIStyle.Custom;
             this.uiComboBox7.TabIndex = 11;
             this.uiComboBox7.Text = "One";
@@ -3481,11 +3425,11 @@ namespace ON4
             // 
             // FrmMonitor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1443, 844);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMonitor";
             this.Text = "FrmMonitor";
             this.Load += new System.EventHandler(this.FrmMonitor_Load);
@@ -3533,7 +3477,6 @@ namespace ON4
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIDataGridView uiDataGridView1;
         private Sunny.UI.UITextBox txtTableNumber1;
-        private Sunny.UI.UIButton btnPotRed;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UIGroupBox uiGroupBox2;
         private Sunny.UI.UIGroupBox uiGroupBox9;
@@ -3722,5 +3665,6 @@ namespace ON4
         private Sunny.UI.UILabel uiLabel65;
         private Sunny.UI.UILabel uiLabel66;
         private Sunny.UI.UIButton btnPotConn12;
+        public Sunny.UI.UIButton btnPotRed;
     }
 }

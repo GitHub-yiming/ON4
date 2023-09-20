@@ -159,6 +159,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D2A69BFE97564DF48862CC2C1F5D4D3F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DBF00D07AFEF41F9AF0E21DB1D54FE5E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -179,18 +185,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_035C2EF3BB74485EA14F0EB3031CD47B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_78413C23D157AA13E4631441568FF81A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D1ACB223DA1F5BF782B572E310AC5B7A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -233,6 +227,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_9B0D361B7364D646F347D8DE4806E939"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_78413C23D157AA13E4631441568FF81A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D1ACB223DA1F5BF782B572E310AC5B7A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -835,6 +841,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2A69BFE97564DF48862CC2C1F5D4D3F"
+            {
+            "SourcePath" = "8:..\\ON4\\bin\\Release\\failTable.txt"
+            "TargetName" = "8:failTable.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_B28EF7AF144C42B1A361A53D7BB4F533"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBF00D07AFEF41F9AF0E21DB1D54FE5E"
             {
             "SourcePath" = "8:..\\Cost_Schedule\\说明.txt"
@@ -1017,15 +1043,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ON4"
-        "ProductCode" = "8:{2AE58504-FD01-42A3-B20C-5F0B5842606F}"
-        "PackageCode" = "8:{DDF4E331-ECA2-4E26-9629-B0FAE86C6A70}"
+        "ProductCode" = "8:{DAC61A69-5BDF-42FF-984B-67620C7218C2}"
+        "PackageCode" = "8:{D908B41F-5720-49C7-A309-77EC7E280E21}"
         "UpgradeCode" = "8:{4B2A1727-BD5E-4DE3-B5DD-CE51BEAB1C27}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.0.0"
+        "ProductVersion" = "8:2.1.0"
         "Manufacturer" = "8:广州互邻空调设备有限公司"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

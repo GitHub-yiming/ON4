@@ -24,5 +24,13 @@ namespace ON4
                 frmMonitor.btnClear.Enabled = true;
 
         }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox12.Checked)
+            {
+
+            }
+        }
     }
 }

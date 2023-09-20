@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -388,7 +389,7 @@ namespace ON4
         }
 
 
-        //去除包头(FE)、校验码和包尾(16)
+        //截取校验码
         public byte XSummation_check_2(byte[] data)
         {
             #region 获取数组相同元素的个数
@@ -1386,6 +1387,24 @@ namespace ON4
         }
         #endregion
 
+        public void IpInofWriete(string path, string value, bool isClearOldText = true)
+        {
 
+            //是否清空旧的文本
+            if (isClearOldText)
+            {
+                //清空txt文件
+                using (FileStream stream = File.Open(path, FileMode.OpenOrCreate, FileAccess.Write))
+                {
+                    stream.Seek(0, SeekOrigin.Begin);
+                    stream.SetLength(0);
+                }
+            }
+            //写入内容
+            using (StreamWriter writer = new StreamWriter(path, true))
+            {
+                writer.WriteLine(value);
+            }
+        }
     }
 }
